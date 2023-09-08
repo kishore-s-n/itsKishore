@@ -1,0 +1,143 @@
+/* --------------------defaults-------------------- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222831;
+}
+section{
+    min-height: 100vh;
+    max-height: auto;
+}
+
+/* ----------------home-------------------- */
+
+#home{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.home-col-1{
+    color: #EEEEEE;
+    font-size: 2rem;
+}
+
+.home-col-1 span{
+    font-size: 4rem;
+    color: #00ADB5;
+}
+.bgdes{
+    background-color: #00ADB5;
+    height: 100px;
+    width: 100px;
+}
+
+
+@media (max-width:426px) { 
+    #home{
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width:769px) {
+
+    nav{
+        position: fixed;
+        width: 100%;
+        bottom: 30px;
+        display: flex;
+        justify-content: center;
+        z-index: 100;
+    }
+    nav .logo{
+        position: fixed;
+        display: none;
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        background-color: #EEEEEE;
+        border: 3px solid black;
+        border-radius: 20px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+    }
+    
+    nav ul li{
+        padding: 10px;
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        color: black;
+        font-size: large;
+        display: flex;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 700;
+        align-items: center;
+    }
+    
+    
+    nav ul li a span{
+        display: none;
+        padding-left: 10px;
+    }
+}
+
+
+
+
+@media (min-width:1024px) {
+
+    nav{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background-color: #EEEEEE;
+        position: fixed;
+        z-index: 100;
+    }
+    
+    nav .logo{
+        font-size: 30px;
+        padding-left: 15px;
+        font-weight: 800;
+    }
+    
+    nav ul{
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding-right: 15px;
+    }
+    nav ul li a img{
+        display: none;
+    }
+
+    nav ul li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 700;
+        font-size: larger;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+}
