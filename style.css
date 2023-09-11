@@ -1,143 +1,150 @@
 /* --------------------defaults-------------------- */
+:root{
+  --background: black;
+  --primary:#18A558;
+  --secondary:#36454F;
+  --tertiary:black;
+  --text:white;
+  --navbarcolor: #36454F;
+}
+html{
+  scroll-behavior: smooth;
+}
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
+
 body{
-    background-color: #222831;
+  background-color: var(--background);
 }
-section{
-    min-height: 100vh;
-    max-height: auto;
+
+
+nav{
+  position: fixed;
+  background-color: var(--navbarcolor);
+}
+
+nav ul{
+  list-style: none;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: var(--text);
+}
+nav .logo,.logo{
+  font-size: 30px;
+  color: var(--text);
+}
+nav .logo span,.logo{
+  color: var(--primary);
 }
 
 /* ----------------home-------------------- */
-
 #home{
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
+  height: auto;
+}
+.intro{
+  background-color: var(--secondary);
+  color: var(--text);
+  background-position: center;
+  display: flex;
 }
 
-.home-col-1{
-    color: #EEEEEE;
-    font-size: 2rem;
-}
-
-.home-col-1 span{
-    font-size: 4rem;
-    color: #00ADB5;
-}
-.bgdes{
-    background-color: #00ADB5;
-    height: 100px;
-    width: 100px;
+/* ---------------about--------------- */
+#about{
+  background-color: var(--primary);
+  min-height: 100vh;
+  height: auto;
 }
 
 
+/* ---------------mobile styles----------------- */
 @media (max-width:426px) { 
-    #home{
-        flex-direction: column;
-    }
+nav ul li span{
+  display: none;
+}
+.intro{
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 0 0 40px 40px;
+}
+.intro h2{
+  font-size: 3em;
+  padding: 50px 30px 50px 15px;
+  font-family: Courier;
+}
+.softskills{
+  background-color: var(--primary);
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px var(--secondary);
+}
+.softskills li{
+  font-size: 20px;
+  padding: 5px 0;
+  font-weight: 500;
+  text-align: center;
+  color: var(--secondary);
+  list-style: none;
+}
 }
 
-
-
+/* 
+----------------tablet styles-------------------- */
 @media (max-width:769px) {
 
-    nav{
-        position: fixed;
-        width: 100%;
-        bottom: 30px;
-        display: flex;
-        justify-content: center;
-        z-index: 100;
-    }
-    nav .logo{
-        position: fixed;
-        display: none;
-    }
-    nav ul{
-        display: flex;
-        list-style: none;
-        background-color: #EEEEEE;
-        border: 3px solid black;
-        border-radius: 20px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
-    }
-    
-    nav ul li{
-        padding: 10px;
-    }
-    
-    nav ul li a{
-        text-decoration: none;
-        color: black;
-        font-size: large;
-        display: flex;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 700;
-        align-items: center;
-    }
-    
-    
-    nav ul li a span{
-        display: none;
-        padding-left: 10px;
-    }
+nav{
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 20px  20px 0 0;
+}
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li{
+  padding: 15px 0;
+}
+
+nav .logo{
+  display: none;
+}
+
+#home{
+  min-height: 100vh;
+}
+.logobar{
+  position: fixed;
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: var(--secondary);
+  text-align: center;
+  padding: 10px 0;
+}
+.logo{
+  font-size: 25px;
+  font-weight: 700;
+  font-family: Courier New;
+}
+.logo span{
+  color: var(--tertiary);
+  font-size: 30px;
+}
 }
 
 
-
+/* ----------------desktop styles-------------------- */
 
 @media (min-width:1024px) {
 
-    nav{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        background-color: #EEEEEE;
-        position: fixed;
-        z-index: 100;
-    }
-    
-    nav .logo{
-        font-size: 30px;
-        padding-left: 15px;
-        font-weight: 800;
-    }
-    
-    nav ul{
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        padding-right: 15px;
-    }
-    nav ul li a img{
-        display: none;
-    }
-
-    nav ul li{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    nav ul li a{
-        text-decoration: none;
-        color: black;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 700;
-        font-size: larger;
-    }
-
-    
-    
-    
-    
-    
-    
-    
-    
 }
