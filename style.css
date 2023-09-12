@@ -1,11 +1,11 @@
 /* --------------------defaults-------------------- */
 :root{
-  --background: black;
-  --primary:#18A558;
-  --secondary:#36454F;
-  --tertiary:black;
-  --text:white;
-  --navbarcolor: #36454F;
+  --background: white;
+  --c1:rgb(42, 123, 42);
+  --c2:rgb(23, 23, 119);
+  --c3:rgb(117, 6, 6);
+  --c4:goldenrod;
+  --navbarcolor: black;
 }
 html{
   scroll-behavior: smooth;
@@ -14,11 +14,9 @@ html{
     padding: 0;
     margin: 0;
 }
-
-/* ----------------home-------------------- */
-
-/* ---------------about--------------- */
-
+body{
+  background-color: var(--backgroundl̥ō);
+}
 
 /* ---------------mobile styles----------------- */
 @media (max-width:426px) { 
@@ -33,5 +31,115 @@ html{
 /* ----------------desktop styles-------------------- */
 
 @media (min-width:1024px) {
+  /* ----------------home-------------------- */
+  #home{
+    height: auto;
+  }
+  /* -------------navbar--------------- */
+  .logo{
+    color: white;
+    font-size: 35px;
+    margin-left: 2%;
+  }
+  nav{
+    background-color: var(--navbarcolor);
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+  nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: white;
+  }
+  nav ul li{
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+  nav ul li:hover{
+    background-color: blueviolet;
+    transition: 0.7s ease-in-out;
+  
+  }
+  
+  /* ----------------------desktop home---------------- */
+  
+  
+  .bg-bx{
+    height: 200px;
+    width: 400px;
+    border-radius: 25px;
+    position: relative; 
+  }
+  .bg-bx-1{
+    background-color: var(--c1);
+    position: relative;
+    animation: slide-in-tl 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;}
+  
+  /* ---------------about--------------- */
+  
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slide-in-left{
+  from{
+
+  }
+  to{
+
+  }
 }
