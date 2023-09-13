@@ -1,22 +1,98 @@
 /* --------------------defaults-------------------- */
 :root{
-  --background: white;
-  --c1:rgb(42, 123, 42);
-  --c2:rgb(23, 23, 119);
-  --c3:rgb(117, 6, 6);
-  --c4:goldenrod;
-  --navbarcolor: black;
+  --c1:#E8EEF2;
+  --c2:#C52233;
+  --c3:#050505;
+  --c4:#E3B23C;
+  --c5:#1A659E;
 }
 html{
   scroll-behavior: smooth;
 }
-*{
-    padding: 0;
-    margin: 0;
-}
 body{
-  background-color: var(--backgroundl̥ō);
+    background-color: white;
+    overflow: hidden;
 }
+.letter-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+}
+
+.letter {
+  font-size: 2em;
+  animation: appear 1s ease-out forwards;
+  opacity: 0;
+  margin: 0 5px; /* Adjust spacing between letters */
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.my-intro{
+    display: block;
+}
+.bxcontainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.bx{
+    position: relative;
+    transform: rotate(20deg);
+    border-radius: 0 20px 0 0;
+    height: 20vh;
+    width: 200px;
+    left: -50px;
+    top: -10px;
+}
+.head{
+    text-align: right;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.home{
+    background-color: var(--c1);
+    animation: slideright 1s ease-out both;
+    animation-delay: 0;
+}
+.about{
+    animation: slideright 1s ease-out both;
+    background-color: var(--c2);
+    animation-delay: 0.2s;
+    color: white;
+}
+.service{
+    background-color: var(--c3);
+    animation: slideright 1s ease-out both;
+    animation-delay: 0.4s;
+    color: white;
+}
+.portfolio{
+    background-color: var(--c4);
+    animation: slideright 1s ease-out both;
+    animation-delay: 0.6s;
+}
+.contact{
+    animation: slideright 1s ease-out both;
+    animation-delay: 0.8s;
+    background-color: var(--c5);
+    color: white;
+}
+
+.active{
+    height: 100vh;
+    width: 100vw;
+    transform: rotate(0deg);
+}
+
 
 /* ---------------mobile styles----------------- */
 @media (max-width:426px) { 
@@ -31,115 +107,15 @@ body{
 /* ----------------desktop styles-------------------- */
 
 @media (min-width:1024px) {
-  /* ----------------home-------------------- */
-  #home{
-    height: auto;
-  }
-  /* -------------navbar--------------- */
-  .logo{
-    color: white;
-    font-size: 35px;
-    margin-left: 2%;
-  }
-  nav{
-    background-color: var(--navbarcolor);
-    display: flex;
-    justify-content: space-between;
-    font-family: monospace;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-  }
-  nav ul{
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-  nav ul li a{
-    text-decoration: none;
-    color: white;
-  }
-  nav ul li{
-    font-size: 20px;
-    padding: 10px 15px;
-  }
-  nav ul li:hover{
-    background-color: blueviolet;
-    transition: 0.7s ease-in-out;
-  
-  }
-  
-  /* ----------------------desktop home---------------- */
-  
-  
-  .bg-bx{
-    height: 200px;
-    width: 400px;
-    border-radius: 25px;
-    position: relative; 
-  }
-  .bg-bx-1{
-    background-color: var(--c1);
-    position: relative;
-    animation: slide-in-tl 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;}
-  
-  /* ---------------about--------------- */
-  
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes slide-in-left{
+@keyframes slideright{
   from{
-
+    top: -1000px;
+    left: -1000px;
   }
   to{
-
+    top: 0;
+    left: -50px;
   }
 }
