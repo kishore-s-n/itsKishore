@@ -50,7 +50,6 @@ to {
   left: -50px;
   top: -10px;
   text-align: right;
-  margin-right: 30px;
   color: white;
   cursor: pointer;
   animation: slideright 1s ease-out both;
@@ -121,7 +120,14 @@ to {
   font-size: larger;
   border: 1px solid white;
 }
-
+@media (max-height:500px) {
+  .navcontainer{
+    flex-direction: row-reverse;
+  }
+  .nav-btn{
+    transform: rotate(0deg);
+  }
+}
 @media (max-width: 426px) {}
 
 @media (max-width: 769px) {}
