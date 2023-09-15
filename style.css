@@ -89,15 +89,16 @@ html{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: height 0.5s, opacity 0.5s;
+  transition: height 0.5s, opacity 0.5s, width 0.5s;
 }
 
 .fullscreen-section.active {
   height: 100%;
+  width: 100%;
   animation: expand-to-fullscreen 1s both;
   opacity: 1;
   overflow: auto;
