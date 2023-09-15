@@ -10,37 +10,30 @@ body {
   background-color: white;
   overflow: hidden;
 }
-
-.letter-container {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 30px;
-  right: 20px;
+html{
+    scroll-behavior: smooth;
 }
 
-.letter {
-  font-size: 2em;
-  animation: appear 1s ease-out forwards;
-  opacity: 0;
-  margin: 0 5px;
-}
-
-@keyframes appear {
-from {
-  opacity: 0;
-}
-to {
-  opacity: 1;
-}
-}
+#home,.home-nav-btn { background-color: var(--c1); }
+#about,.about-nav-btn { background-color: var(--c2); }
+#service,.service-nav-btn { background-color: var(--c3); }
+#portfolio,.portfolio-nav-btn { background-color: var(--c4); }
+#contact,.contact-nav-btn { background-color: var(--c5); }
 
 .navcontainer {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
-
+.letter-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 10px;
+}
+.letter{
+    font-size: 30px;
+}
 .nav-btn {
   position: relative;
   transform: rotate(20deg);
@@ -50,9 +43,10 @@ to {
   left: -50px;
   top: -10px;
   text-align: right;
+  margin-right: 30px;
   color: white;
   cursor: pointer;
-  animation: slideright 1s ease-out both;
+  box-shadow: 0 5px 5px 5px black;
 }
 
 .head{
@@ -91,12 +85,6 @@ to {
   color: white;
 }
 
-#home,.home-nav-btn { background-color: var(--c1); }
-#about,.about-nav-btn { background-color: var(--c2); }
-#service,.service-nav-btn { background-color: var(--c3); }
-#portfolio,.portfolio-nav-btn { background-color: var(--c4); }
-#contact,.contact-nav-btn { background-color: var(--c5); }
-
 .fullscreen-section {
   position: fixed;
   top: 0;
@@ -110,6 +98,7 @@ to {
 
 .fullscreen-section.active {
   height: 100%;
+  animation: expand-to-fullscreen 1s both;
   opacity: 1;
   overflow: auto;
   z-index: 1;
@@ -120,13 +109,14 @@ to {
   font-size: larger;
   border: 1px solid white;
 }
-@media (max-height:500px) {
-  .navcontainer{
-    flex-direction: row-reverse;
-  }
-  .nav-btn{
-    transform: rotate(0deg);
-  }
+@media (max-height:500px){
+    .navcontainer{
+        flex-direction: row-reverse;
+    }
+    .nav-btn{
+        transform: rotate(0deg);
+        margin-right: 0px;
+    }
 }
 @media (max-width: 426px) {}
 
@@ -143,4 +133,13 @@ to {
     top: 0;
     left: -50px;
   }
+}
+@keyframes expand-to-fullscreen {
+    0%{
+        left: -500px;
+        top: 50vh;
+    }
+    20%{
+        transform: rotate(0deg);
+    }
 }
