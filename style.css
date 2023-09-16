@@ -50,7 +50,7 @@ to {
   left: -50px;
   top: -10px;
   text-align: right;
-  color: white;
+color: white;
   cursor: pointer;
   animation: slideright 1s ease-out both;
 }
@@ -142,5 +142,10 @@ to {
   to {
     top: 0;
     left: -50px;
+  }
+}
+@keyframes slideLeft {
+  to{
+    left: -1000px;
   }
 }
