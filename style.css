@@ -31,7 +31,7 @@ html{
     right: 10px;
 }
 .letter{
-    font-size: 30px;
+    font-size: 3em;
 }
 .nav-btn {
   position: relative;
@@ -49,6 +49,7 @@ html{
 }
 
 .head{
+  font-size: 1em;
   text-align: right;
   margin-right: 30px;
   margin-top: 30px;
@@ -105,9 +106,24 @@ html{
 .close-btn{
   background-color: transparent;
   padding: 5px;
-  font-size: larger;
+  font-size: 1.5em;
   border: 1px solid white;
 }
+
+.greeting{
+  background-color: white;
+  padding: 0.7em;
+  margin: 1em;
+  box-shadow: 5px 5px 5px 5px #050505;
+  font-family: monospace;
+}
+.greeting p{
+  font-size: 2em;
+}
+.greeting span{
+  color: var(--c2);
+}
+
 @media (max-height:500px){
     .navcontainer{
         flex-direction: row-reverse;
