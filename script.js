@@ -7,4 +7,3 @@ function closeSection(sectionId) {
     const currentSection = document.getElementById(sectionId);
     currentSection.classList.remove('active');
 }
-  

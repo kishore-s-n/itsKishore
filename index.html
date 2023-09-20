@@ -23,59 +23,52 @@
         <div class="navcontainer">
             <div class="home-nav-btn nav-btn" onclick="setActiveSection('home')">
                 <div class="home-head head"><h1>Home</h1></div>
+                <section id="home" class="fullscreen-section">
+                    <button class="close-btn" onclick="closeSection('home')">close</button>
+                    <div class="home-content">
+                        <h1>Hi There..👋 <br>
+                          I'm Kishore
+                        </h1>
+                        <p>I work to make a better web; one that is fast, easy to use,beautiful, accessible to all, and frustration-free. Regardless of your specific business requirements.</p>
+                    </div>
+                
+                </section>
             </div>
             <div class="about-nav-btn nav-btn" onclick="setActiveSection('about')">
                 <div class="about-head head"><h1>About Me</h1></div>
+                <section id="about" class="fullscreen-section">
+                    <button class="close-btn" onclick="closeSection('about')">close</button>
+                    
+                </section>
             </div>
             <div class="service-nav-btn nav-btn" onclick="setActiveSection('service')">
                 <div class="service-head head"><h1>Services</h1></div>
+                <section id="service" class="fullscreen-section">
+                    <button class="close-btn" onclick="closeSection('service')">close</button>
+                </section>
             </div>
             <div class="portfolio-nav-btn nav-btn" onclick="setActiveSection('portfolio')">
                 <div class="portfolio-head head"><h1>Portfolio</h1></div>
+                <section id="portfolio" class="fullscreen-section">
+                    <button class="close-btn" onclick="closeSection('portfolio')">close</button> 
+                </section>
             </div>
             <div class="contact-nav-btn nav-btn" onclick="setActiveSection('contact')">
                 <div class="contact-head head"><h1>Contact Me</h1></div>
+                
+                <section id="contact" class="fullscreen-section">
+                    <button class="close-btn" onclick="closeSection('contact')">close</button>
+                </section>
             </div>
         </div>
 </section>
-<section id="home" class="fullscreen-section">
-    <button class="close-btn" onclick="closeSection('home')">close</button>
-    <div class="greeting">
-        <p>welcome<span>!</span></p>
-        <h1>This is <span>Kishore</span></h1>
-        <h1>I am a web Developer from <span>India</span>
-        <br>Being a self taught dev, i practice by doing most of my projects from scrach without out sourcing any piece of code.</h1>
-    </div>
-    <div class="mySkill">
-
-    </div>
-</section>
-
-
-<section id="about" class="fullscreen-section">
-    <button class="close-btn" onclick="closeSection('about')">close</button>
-    
-</section>
 
 
 
-<section id="service" class="fullscreen-section">
-    <button class="close-btn" onclick="closeSection('service')">close</button>
-
-</section>
 
 
 
-<section id="portfolio" class="fullscreen-section">
-    <button class="close-btn" onclick="closeSection('portfolio')">close</button>
 
-</section>
-
-
-<section id="contact" class="fullscreen-section">
-    <button class="close-btn" onclick="closeSection('contact')">close</button>
-
-</section>
 
 <script src="script.js"></script>
 </body>
