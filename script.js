@@ -1,8 +1,8 @@
-function setActiveSection(sectionId) {
-    const activeSection = document.getElementById(sectionId);
+function setActiveSection(name) {
+    const activeSection = document.querySelector(name);
     activeSection.classList.add('active');
 }
-function closeSection(sectionId) {
-    const currentSection = document.getElementById(sectionId);
+function closeSection(name) {
+    const currentSection = document.querySelector(name);
     currentSection.classList.remove('active');
 }

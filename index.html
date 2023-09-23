@@ -9,20 +9,24 @@
 </head>
 <body>
 <div class="mainContainer">
-  <section id="home" class="navBtn" onclick="setActiveSection('home')">
-  </section>
-  <section id="about" class="navBtn" onclick="setActiveSection('about')">          
-  </section>
-  <section id="service" class="navBtn" onclick="setActiveSection('service')">        
-  </section>
-  <section id="portfolio" class="navBtn" onclick="setActiveSection('portfolio')">        
-  </section>
-  <section id="hire" class="navBtn" onclick="setActiveSection('hire')">
-  </section>
+  <div class="home navBtn" onclick="setActiveSection('.home'),setActiveSection('.home-content')">
+  </div>
+  <div class="about navBtn" onclick="setActiveSection('.about'),setActiveSection('.about-content')">          
+  </div>
+  <div class="service navBtn" onclick="setActiveSection('.service'),setActiveSection('.service-content')">        
+  </div>
+  <div class="portfolio navBtn" onclick="setActiveSection('.portfolio'),setActiveSection('.portfolio-content')">        
+  </div>
+  <div class="hire navBtn" onclick="setActiveSection('.hire'),setActiveSection('.hire-content')">
+  </div>
 </div>
       
 <div class="home-content">
-  <button onclick="closeSection('home')">Close</button>
+  <button onclick="closeSection('.home'),closeSection('.home-content')">Close</button>
+</div>
+      
+<div class="about-content">
+  <button onclick="closeSection('.about'),closeSection('.about-content')">Close</button>
 </div>
 <script src="script.js"></script>
 </body>
