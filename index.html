@@ -8,24 +8,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="mainContainer">
-        <section id="home" class="navBtn">
-
-        </section>
-        <section id="about" class="navBtn">
-
-        </section>
-        <section id="service" class="navBtn">
-
-        </section>
-        <section id="portfolio" class="navBtn">
-
-        </section>
-        <section id="hire" class="navBtn">
-            
-        </section>
-    </div>
-
+<div class="mainContainer">
+  <section id="home" class="navBtn" onclick="setActiveSection('home')">
+  </section>
+  <section id="about" class="navBtn" onclick="setActiveSection('about')">          
+  </section>
+  <section id="service" class="navBtn" onclick="setActiveSection('service')">        
+  </section>
+  <section id="portfolio" class="navBtn" onclick="setActiveSection('portfolio')">        
+  </section>
+  <section id="hire" class="navBtn" onclick="setActiveSection('hire')">
+  </section>
+</div>
+      
+<div class="home-content">
+  <button onclick="closeSection('home')">Close</button>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
