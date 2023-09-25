@@ -27,7 +27,7 @@ body {
   position: relative;
   left: -80px;
   box-shadow: 10px 10px 10px black;
-  transition: height 1s,width 1s,transform 1s,border-radius 1s;
+  transition: height 1s,width 1s,transform 0.5s,border-radius 1s;
 }
 .navBtn.active{ 
   z-index: 10;
@@ -38,11 +38,11 @@ body {
   transform: translateY(-100vh);
   animation: slideup 0.4s ease-in both;
 }
-.home{background-color: var(--c1);}
-.about{background-color: var(--c2);}
-.service{background-color: var(--c3);}
-.portfolio{background-color: var(--c4);}
-.hire{background-color: var(--c5);}
+.home{background-color: var(--c1);color: black;}
+.about{background-color: var(--c2);color: white;}
+.service{background-color: var(--c3);color: white;}
+.portfolio{background-color: var(--c4);color: black;}
+.hire{background-color: var(--c5);color: white;}
 
 .home-content{
   display: none;
@@ -73,7 +73,54 @@ body {
 }
 
 
+.service-content{
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 0%;
+  transition: height 1s;
+}
 
+.service-content.active{
+  z-index: 100;
+  display: block;
+  height: 100%;
+}
+
+.portfolio-content{
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 0%;
+  transition: height 1s;
+}
+
+.portfolio-content.active{
+  z-index: 100;
+  display: block;
+  height: 100%;
+}
+
+.hire-content{
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 0%;
+  transition: height 1s;
+}
+
+.hire-content.active{
+  z-index: 100;
+  display: block;
+  height: 100%;
+}
+
+.navBtn h1{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  font-size: 2em;
+}
 
 @media (max-height:500px){
   
@@ -97,6 +144,5 @@ body {
 @keyframes slideup {
   to{
     left: 0;
-    top: 0;
   }
 }

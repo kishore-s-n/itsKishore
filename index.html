@@ -10,14 +10,19 @@
 <body>
 <div class="mainContainer">
   <div class="home navBtn" onclick="setActiveSection('.home'),setActiveSection('.home-content')">
+    <h1>Home</h1>
   </div>
   <div class="about navBtn" onclick="setActiveSection('.about'),setActiveSection('.about-content')">          
+    <h1>About</h1>
   </div>
   <div class="service navBtn" onclick="setActiveSection('.service'),setActiveSection('.service-content')">        
+    <h1>Service</h1>
   </div>
   <div class="portfolio navBtn" onclick="setActiveSection('.portfolio'),setActiveSection('.portfolio-content')">        
+    <h1>Portfolio</h1>
   </div>
   <div class="hire navBtn" onclick="setActiveSection('.hire'),setActiveSection('.hire-content')">
+    <h1>Hire Me</h1>
   </div>
 </div>
       
@@ -27,6 +32,21 @@
       
 <div class="about-content">
   <button onclick="closeSection('.about'),closeSection('.about-content')">Close</button>
+</div>
+
+
+<div class="service-content">
+  <button onclick="closeSection('.service'),closeSection('.service-content')">Close</button>
+</div>
+
+
+<div class="portfolio-content">
+  <button onclick="closeSection('.portfolio'),closeSection('.portfolio-content')">Close</button>
+</div>
+
+
+<div class="hire-content">
+  <button onclick="closeSection('.hire'),closeSection('.hire-content')">Close</button>
 </div>
 <script src="script.js"></script>
 </body>
