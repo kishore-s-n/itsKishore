@@ -6,58 +6,76 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="https://kit.fontawesome.com/800b42292e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="letter-container">
-        <div class="letter">P</div>
-        <div class="letter">O</div>
-        <div class="letter">R</div>
-        <div class="letter">T</div>
-        <div class="letter">F</div>
-        <div class="letter">O</div>
-        <div class="letter">L</div>
-        <div class="letter">I</div>
-        <div class="letter">O</div>
+<main>
+  <div class="mainContainer">
+    <div class="home navBtn" onclick="setActiveSection('.home'),setActiveSection('.home-content')">
+      <h1>Home</h1>
     </div>
-<section id="landingpage">
-        <div class="navcontainer">
-            <div class="home-nav-btn nav-btn" onclick="setActiveSection('home')">
-                <div class="home-head head"><h1>Home</h1></div>
-            </div>
-            <div class="about-nav-btn nav-btn" onclick="setActiveSection('about')">
-                <div class="about-head head"><h1>About Me</h1></div>
-            </div>
-            <div class="service-nav-btn nav-btn" onclick="setActiveSection('service')">
-                <div class="service-head head"><h1>Services</h1></div>
-            </div>
-            <div class="portfolio-nav-btn nav-btn" onclick="setActiveSection('portfolio')">
-                <div class="portfolio-head head"><h1>Portfolio</h1></div>
-            </div>
-            <div class="contact-nav-btn nav-btn" onclick="setActiveSection('contact')">
-                <div class="contact-head head"><h1>Contact Me</h1></div>
-            </div>
-        </div>
-</section>
-<section id="home" class="fullscreen-section">
-    <button class="close-btn" onclick="closeSection('home')">close</button>
-</section>
-<section id="about" class="fullscreen-section">
-    <button class="close-btn" onclick="closeSection('about')">close</button>
-    
-</section>
-<section id="service" class="fullscreen-section">
-    <button class="close-btn" onclick="closeSection('service')">close</button>
+    <div class="about navBtn" onclick="setActiveSection('.about'),setActiveSection('.about-content')">          
+      <h1>About</h1>
+    </div>
+    <div class="service navBtn" onclick="setActiveSection('.service'),setActiveSection('.service-content')">        
+      <h1>Service</h1>
+    </div>
+    <div class="portfolio navBtn" onclick="setActiveSection('.portfolio'),setActiveSection('.portfolio-content')">        
+      <h1>Portfolio</h1>
+    </div>
+    <div class="hire navBtn" onclick="setActiveSection('.hire'),setActiveSection('.hire-content')">
+      <h1>Hire Me</h1>
+    </div>
+  </div>
+  <div class="invitation">
+    <h1>Hi, I am a <span>Web Developer</span></h1><h2>This is my <span>Portfolio</span></h2>
+  </div>
+</main>
 
-</section>
-<section id="portfolio" class="fullscreen-section">
-    <button class="close-btn" onclick="closeSection('portfolio')">close</button>
+<div class="home-content">
+  <button class="close-btn" onclick="closeSection('.home'),closeSection('.home-content')">Close</button>
+  <div class="home-main">
+    <div class="greeting">
+      <div class="greet">
+          <h1>Hi,Welcome👋</h1>
+          <h2>This is <span>Kishore</span></h2>
+      </div>
+      <div class="social_icons">
+          <a href="https://www.linkedin.com/in/kishore-sn-030886258" blank><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
+          <a href=""><i class="fa-brands fa-facebook fa-2xl"></i></a>
+          <a href=""><i class="fa-brands fa-instagram fa-2xl"></i></a>
+          <a href=""><i class="fa-brands fa-github fa-2xl"></i></a>
+      </div>
+      <div class="gotonext">
+          <button class="nxtbtn" onclick="closeSection('.home'),closeSection('.home-content'),setActiveSection('.about'),setActiveSection('.about-content')">Next</button>
+          <button class="nxtbtn" onclick="closeSection('.home'),closeSection('.home-content'),setActiveSection('.hire'),setActiveSection('.hire-content')">Hire Me</button>
+          <button class="cvbtn">Download CV</button>
+      </div>
+    </div>
+    <div class="mypic">
+      <img src="image\mycode.png" alt="inspirational quote">
+    </div>
+  </div>
+</div>
+      
+<div class="about-content">
+  <button class="close-btn" onclick="closeSection('.about'),closeSection('.about-content')">Close</button>
+</div>
 
-</section>
-<section id="contact" class="fullscreen-section">
-    <button class="close-btn" onclick="closeSection('contact')">close</button>
 
-</section>
+<div class="service-content">
+  <button class="close-btn" onclick="closeSection('.service'),closeSection('.service-content')">Close</button>
+</div>
 
+
+<div class="portfolio-content">
+  <button class="close-btn" onclick="closeSection('.portfolio'),closeSection('.portfolio-content')">Close</button>
+</div>
+
+
+<div class="hire-content">
+  <button class="close-btn" onclick="closeSection('.hire'),closeSection('.hire-content')">Close</button>
+</div>
 <script src="script.js"></script>
 </body>
 </html>

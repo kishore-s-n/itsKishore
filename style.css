@@ -5,132 +5,306 @@
   --c4: #E3B23C;
   --c5: #1A659E;
 }
+*{
+  padding: 0;
+  margin: 0;
+}
 
 body {
-  background-color: white;
   overflow: hidden;
+  background-color: white;
 }
-html{
-    scroll-behavior: smooth;
-}
-
-#home,.home-nav-btn { background-color: var(--c1); }
-#about,.about-nav-btn { background-color: var(--c2); }
-#service,.service-nav-btn { background-color: var(--c3); }
-#portfolio,.portfolio-nav-btn { background-color: var(--c4); }
-#contact,.contact-nav-btn { background-color: var(--c5); }
-
-.navcontainer {
+.invitation{
+  margin-left: 50vw;
+  font-size: 1.5em;
+  position: fixed;
+  z-index: -10;
+  top: 0;
   display: flex;
+  align-items: start;
   flex-direction: column;
-  height: 100vh;
+  justify-content: center;
+  width: 60vw;
+  animation: fadein 1s ease-in-out both;
 }
-.letter-container{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    right: 10px;
+.invitation h2 span{
+  color: var(--c5);
 }
-.letter{
-    font-size: 30px;
+
+.invitation h1 span{
+  color: var(--c2);
 }
-.nav-btn {
+
+.mainContainer{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  animation: slideright 1s ease-in forwards;
+}
+
+.navBtn{
+  height: 10em;
+  width: 25em;
+  transform: rotate(15deg) translateX(-80px);
+  border-radius: 20px;
+  background-color: #050505;
   position: relative;
-  transform: rotate(20deg);
-  border-radius: 0 20px 0 0;
-  height: 20vh;
-  width: 200px;
-  left: -50px;
-  top: -10px;
-  text-align: right;
+  display: flex;
+  box-shadow: 10px 10px 10px black;
+  transition: height 1s,width 1s,transform 0.8s,border-radius 1s;
+}
+.navBtn.active{ 
+  z-index: 10;
+  border-radius: 0;
+  display: flex;
+  height: 200vh;
+  width: 100%;
+  transform: rotate(0deg) translateY(-100vh);
+}
+.home{background-color: var(--c1);color: black;}
+.about{background-color: var(--c2);color: white;}
+.service{background-color: var(--c3);color: white;}
+.portfolio{background-color: var(--c4);color: black;}
+.hire{background-color: var(--c5);color: white;}
+
+.close-btn{
+  font-size: large;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border-color: transparent;
+  margin-top: 2em;
+  margin-left: 2em;
+  position: fixed;
+  animation: fadein 0.3s ease-in-out both;
+}
+.close-btn:hover{
   color: white;
-  cursor: pointer;
-  box-shadow: 0 5px 5px 5px black;
+  background-color: #050505;
+  transition: 0.5s;
 }
 
-.head{
-  text-align: right;
-  margin-right: 30px;
-  margin-top: 30px;
-}
-.home-nav-btn{
-  background-color: var(--c1);
-  animation: slideright 1s ease-out both;
-  animation-delay: 0;
-  color: black;
-}
-.about-nav-btn{
-  animation: slideright 1s ease-out both;
-  background-color: var(--c2);
-  animation-delay: 0.2s;
-  color: white;
-}
-.service-nav-btn{
-  background-color: var(--c3);
-  animation: slideright 1s ease-out both;
-  animation-delay: 0.4s;
-  color: white;
-}
-.portfolio-nav-btn{
-  background-color: var(--c4);
-  animation: slideright 1s ease-out both;
-  animation-delay: 0.6s;
-  color: black;
-}
-.contact-nav-btn{
-  animation: slideright 1s ease-out both;
-  animation-delay: 0.8s;
-  background-color: var(--c5);
-  color: white;
-}
-
-.fullscreen-section {
+.home-content{
+  display: none;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: height 0.5s, opacity 0.5s, width 0.5s;
+  height: 0%;
+  transition: all 1s;
 }
 
-.fullscreen-section.active {
+.home-content.active{
+  display: block;
+  z-index: 100;
+  overflow: none;
   height: 100%;
   width: 100%;
-  animation: expand-to-fullscreen 1s both;
-  opacity: 1;
-  overflow: auto;
-  z-index: 1;
 }
-.close-btn{
-  background-color: transparent;
-  padding: 5px;
-  font-size: larger;
-  border: 1px solid white;
+
+.about-content{
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 0%;
+  transition: all 1s;
 }
+
+.about-content.active{
+  left: 0;
+  display: block;
+  z-index: 100;
+  overflow: none;
+  height: 100%;
+  width: 100%;
+}
+
+
+.service-content{
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 0%;
+  transition: height 1s;
+}
+
+.service-content.active{
+  z-index: 100;
+  display: block;
+  height: 100%;
+}
+
+.portfolio-content{
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 0%;
+  transition: height 1s;
+}
+
+.portfolio-content.active{
+  z-index: 100;
+  display: block;
+  height: 100%;
+}
+
+.hire-content{
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 0%;
+  transition: height 1s;
+}
+
+.hire-content.active{
+  z-index: 100;
+  display: block;
+  height: 100%;
+}
+
+.navBtn h1{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  font-size: 2em;
+}
+.home-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.greeting{
+  flex-basis: 50%;
+  justify-content: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+  padding-left: 10vh;
+}
+
+.greeting h1{
+  animation: slidein 1s ease-in 0s forwards;
+  font-size: 4em;
+}
+.greet h2 span{
+  color: var(--c5);
+}
+.greeting h2{
+  animation: slidein 1s ease-in 0.2s both;
+  font-size: 3em;
+}
+.social_icons{
+  margin-top: 2em;
+  display: flex;
+  gap: 1em;
+  animation: fadein 0.2s ease-in-out 1.2s both;
+}
+.social_icons a:nth-child(1){
+  animation: slideright .5s ease-in 1.2s both;
+}
+
+.social_icons a:nth-child(2){
+  animation: slideright .5s ease-in 1.3s both;
+}
+
+.social_icons a:nth-child(3){
+  animation: slideright .5s ease-in 1.4s both;
+}
+
+.social_icons a:nth-child(4){
+  animation: slideright .5s ease-in 1.5s both;
+}
+
+.social_icons a{
+  color: var(--c2);
+  text-decoration: none;
+  margin-left: 0.5em;
+}
+.gotonext {
+  margin-top: 2em;
+}
+.nxtbtn{
+  background-color: var(--c4);
+  animation: fadein 0.2s ease-in-out 1.8s backwards;
+  padding: 0.5em;
+  border-radius: 10px;
+  font-size: 1em;
+}
+.cvbtn{
+  background-color: var(--c5);
+  animation: fadein 0.2s ease-in-out 1.8s backwards;
+  padding: 0.5em;
+  border-radius: 10px;
+  font-size: 1em;
+}
+.myimg{
+  flex-basis: 50%;
+}
+.mypic img{
+  animation: slideleft 1s ease-in-out 1.5s both;
+  height: 20em;
+  border-radius: 10px;
+  box-shadow: 10px 5px 20px gray;
+}
+@keyframes navanimation {
+  from{
+    transform: translateX(-20em) rotate(15deg); 
+  }
+  to{
+    transform: translateX(-80px) rotate(15deg);
+  }
+}
+@keyframes fadein {
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
+}
+@keyframes slidein {
+  from{
+      opacity: 0;
+      transform: translateX(-1000px);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
+@keyframes slideright {
+  from{
+    filter: blur(20px);
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to{
+    filter: blur(0);
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideleft {
+  from{
+    transform: translateX(+50em);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+
+
 @media (max-height:500px){
-    .navcontainer{
-        flex-direction: row-reverse;
-    }
-    .nav-btn{
-        transform: rotate(0deg);
-        margin-right: 0px;
-    }
+  
 }
-@media (max-width: 426px) {}
+@media (max-width: 426px) {
+  .navBtn{
+    width: 15em;
+  }
+}
 
 @media (max-width: 769px) {}
 
 @media (min-width: 1024px) {}
-
-@keyframes slideright {
-  from {
-    top: -1000px;
-    left: -1000px;
-  }
-  to {
-    top: 0;
-    left: -50px;
-  }
-}
