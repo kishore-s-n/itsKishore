@@ -61,11 +61,86 @@
       
 <div class="about-content">
   <button class="close-btn" onclick="closeSection('.about'),closeSection('.about-content')">Close</button>
+  <div class="about-container">
+    <div class="aboutme">
+      <h1>About</h1> <h1 class="pullable-word" id="pullableWord">Myself</h1>
+      <div class="introforreveal">
+        <p>I'm a Web Developer who likes to be creative, you maybe thinking how am i creative when i did not add style to this page, i was bored guys😑.But whenever im bored i pull myself😇 to do better and not stop without getting satisfaction.</p>
+        <span class="tooltip">Still can't understand??<span class="tooltiptext">PULL THE WORD MYSELF</span></span>
+      </div>
+      <div class="revealedmyself">
+        <p>Hi Im <span>Kishore</span>,Im a <span>Web developer</span> and <span>App developer</span>,I don't like to do things in a traditional way but to do it in my way and that is how i make a difference.Let's make the world creative and thoughtful starting from us.</p>
+        <div class="gotonext">
+          <button class="nxtbtn" onclick="closeSection('.about'),closeSection('.about-content'),setActiveSection('.home'),setActiveSection('.home-content')">Previous</button>
+          <button class="nxtbtn" onclick="closeSection('.about'),closeSection('.about-content'),setActiveSection('.service'),setActiveSection('.service-content')">Next</button>
+          <button class="nxtbtn" onclick="closeSection('.about'),closeSection('.about-content'),setActiveSection('.hire'),setActiveSection('.hire-content')">Hire Me</button>
+          <button class="cvbtn">Download CV</button>
+        </div>
+      </div>
+    </div>
+    <div class="details">
+      <div class="qualification">
+        <div class="tab-titles">
+          <ul>
+              <li onclick="setActiveTab(this,'skill-contents')" class="tab-link active-tab">
+                  Skills
+              </li>
+              <li onclick="setActiveTab(this,'experience-contents')" class="tab-link ">
+                  Experience
+              </li>
+              <li onclick="setActiveTab(this,'education-contents')" class="tab-link ">
+                  Education
+              </li>
+          </ul>
+        </div>
+        <div id="skill-contents" class="tab-contents mt-10 active-content">
+          <ul>
+              <li><span>Web Development</span><p>Development of web apps and website </p></li>
+              <li><span>UI/UX</span><p>Designing of Web-Apps and Websites</p></li>
+              <li><span>App Development</span><p>Development of mobile and windows applications</p></li>
+          </ul>
+        </div>
+        <div id="experience-contents" class="tab-contents mt-10">
+          <ul>
+              <li><span>Portfolio Website</span><p>Development of web apps and website </p></li>
+              <li><span>Business Portfolio</span><p>Designing of Web-Apps and Websites</p></li>
+              <li><span>E-Commerce</span><p>Development of mobile and windows applications</p></li>
+          </ul>
+        </div>
+        <div id="education-contents" class="tab-contents mt-10">
+          <ul>
+              <li><span>Electrical and Communication Engineering</span><p>I am currently doing my </p></li>
+              <li><span>UI/UX</span><p>Designing of Web-Apps and Websites</p></li>
+              <li><span>App Development</span><p>Development of mobile and windows applications</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hardskills">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>React JS</li>
+          <li>Python</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 <div class="service-content">
   <button class="close-btn" onclick="closeSection('.service'),closeSection('.service-content')">Close</button>
+  <div class="service-main">
+    <h1>Services</h1>
+    <div class="webdev">
+      <img src="image/webdev.jpg" alt="">
+      <div class="webdevinfo">
+        <h1>Web Developement</h1>
+        <p>Welcome to my web development corner! Here, I transform ideas into interactive and user-friendly websites. As a dedicated web developer, I specialize in crafting digital experiences that are both visually appealing and technically sound. From coding to design, my goal is to make the online world more engaging and accessible. Join me on this journey of turning concepts into captivating web realities!</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -79,5 +154,6 @@
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>

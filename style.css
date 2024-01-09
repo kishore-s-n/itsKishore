@@ -250,6 +250,202 @@ body {
   border-radius: 10px;
   box-shadow: 10px 5px 20px gray;
 }
+
+.about-container{
+  padding-top: 8%;
+  color: var(--c1);
+  display: flex;
+}
+
+
+.pullable-word {
+  font-size: 1em;
+  user-select: none;
+  cursor: grab;
+}
+
+
+.aboutme{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 50%;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutme h1{
+  font-size: 3em;
+  text-decoration: underline;
+  text-decoration-color: var(--c5);
+  animation: fadein 0.5s ease-in-out 1s backwards;
+}
+
+.introforreveal.revealed{
+  display: none;
+}
+
+.introforreveal{
+  display: block;
+  padding-top: 6em;
+  animation: slideright 1s ease-in-out 1.5s backwards;
+}
+
+
+.tooltip {
+  position: relative;
+  margin-top: 3em;
+  animation: slideright 1s ease-in-out 6.5s backwards;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.revealedmyself{
+  display: none;
+}
+.revealedmyself.revealed{
+  display: block;
+}
+.revealedmyself p{
+  font-size: 1.5em;
+  padding: 2em 1em 1em 0;
+  animation: slideright 1s ease-in-out 1.5s backwards;
+}
+
+.revealedmyself p span:nth-child(1){
+  color: var(--c5);
+  font-size: 2em;
+}
+.revealedmyself p span:nth-child(2) {
+  color: var(--c4);
+}
+
+
+.revealedmyself p span:nth-child(3){
+  color: var(--c4);
+}
+
+.details{
+  display: none;
+}
+.details.revealed{
+  width: 50%;
+  display: block;
+}
+
+.qualification{
+  background-color: var(--c3);
+  padding: 3em;
+  border-radius: 1em;
+  margin-right: 5%;
+  animation: slideleft 1s ease-in-out 1s backwards;
+}
+
+.hardskills{
+  padding: 2em 0;
+  animation: fadein 1s ease-in-out 1.5s backwards;
+}
+
+.hardskills ul{
+  gap: 1em;
+  display: flex;
+  list-style: none;
+}
+
+.hardskills ul li{
+  background-color: var(--c5);
+  padding: 1em;
+  font-size: 1em;
+  font-weight: bolder;
+  border-radius: 1em;
+  width: fit-content;
+}
+
+.tab-titles ul{
+  display: flex;
+  list-style: none;
+  gap: 2em;
+  font-size: 1.5em;
+  padding: 0 1em 1em 1em;
+}
+.tab-titles ul li{
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+.tab-contents ul{
+  list-style: none;
+}
+
+.tab-contents ul li{
+  padding: 0.5em;
+
+}
+
+.tab-contents ul li span{
+
+  color: var(--c2);
+}
+.tab-contents{
+  display: none;
+}
+
+.tab-contents.active-content{
+  display: block;
+}
+
+.tab-link.active-tab{
+  background-color: var(--c2);
+}
+
+
+
+.service-main{
+  width: 100vw;
+  margin-top: 4em;
+}
+
+.service-main h1{
+  text-align: center;
+  color: var(--c1);
+  font-size: 3em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.webdev{
+  margin-top: 2em;
+  display: flex;
+  background-color: var(--c1);
+}
+.webdev img{
+  margin-left: 2em;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
 @keyframes navanimation {
   from{
     transform: translateX(-20em) rotate(15deg); 
