@@ -2,10 +2,16 @@ function setActiveSection(name) {
     const activeSection = document.querySelector(name);
     activeSection.classList.add('active');
 }
+
+
+
 function closeSection(name) {
     const currentSection = document.querySelector(name);
     currentSection.classList.remove('active');
 }
+
+
+
 function setActiveTab(tab,contentId) {
 
     const tabLinks = document.querySelectorAll('.tab-link');
@@ -19,6 +25,27 @@ function setActiveTab(tab,contentId) {
     const activeContent=document.getElementById(contentId); 
     activeContent.classList.add('active-content')
 }
+
+function setActiveServiceTab(tab, contentId) {
+  const selectedTab = document.querySelector('.service-listing.active-listing');
+  if (selectedTab) {
+    selectedTab.classList.remove('active-listing');
+  }
+
+  const selectedContent = document.querySelector('.service-display > .active-content');
+  if (selectedContent) {
+    selectedContent.classList.remove('active-content');
+  }
+
+  tab.classList.add('active-listing');
+
+  const content = document.querySelector(contentId);
+  if (content) {
+    content.classList.add('active-content');
+  }
+}
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const pullableWord = document.getElementById('pullableWord');
     let isDragging = false;

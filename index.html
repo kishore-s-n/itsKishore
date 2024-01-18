@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  
+  <link href="https://db.onlinewebfonts.com/c/2f8845bdde42e943355a39765c5be5c0?family=Druk+Wide+Web+Super+Regular" rel="stylesheet">
+
   <script defer src="https://kit.fontawesome.com/800b42292e.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -28,8 +31,8 @@
     </div>
   </div>
   <div class="invitation">
-    <h1>Hi, I am a <span>Web Developer</span></h1>
-    <h2>This is my <span>Portfolio</span></h2>
+    <img src="image/myphoto.png" alt="just my photo">
+    <h1>This is My Portfolio </h1>
   </div>
 </main>
 
@@ -42,10 +45,10 @@
           <h2>This is <span>Kishore</span></h2>
       </div>
       <div class="social_icons">
-          <a href="https://www.linkedin.com/in/kishore-sn-030886258" blank><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
-          <a href=""><i class="fa-brands fa-facebook fa-2xl"></i></a>
-          <a href=""><i class="fa-brands fa-instagram fa-2xl"></i></a>
-          <a href=""><i class="fa-brands fa-github fa-2xl"></i></a>
+          <a href="https://www.linkedin.com/in/kishore-sn-030886258" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
+          <a href=""><i class="fa-brands fa-facebook fa-2xl" target="_blank"></i></a>
+          <a href=""><i class="fa-brands fa-instagram fa-2xl" target="_blank"></i></a>
+          <a href=""><i class="fa-brands fa-github fa-2xl" target="_blank"></i></a>
       </div>
       <div class="gotonext">
           <button class="nxtbtn" onclick="closeSection('.home'),closeSection('.home-content'),setActiveSection('.about'),setActiveSection('.about-content')">Next</button>
@@ -65,7 +68,7 @@
     <div class="aboutme">
       <h1>About</h1> <h1 class="pullable-word" id="pullableWord">Myself</h1>
       <div class="introforreveal">
-        <p>I'm a Web Developer who likes to be creative, you maybe thinking how am i creative when i did not add style to this page, i was bored guys😑.But whenever im bored i pull myself😇 to do better and not stop without getting satisfaction.</p>
+        <p>I'm a Web Developer who likes to be creative, you maybe thinking,How am I creative when i did not add much to this page,I was bored guys😑.But whenever im bored i pull <span>MYSELF</span>😇 to do better and not stop without getting satisfaction.</p>
         <span class="tooltip">Still can't understand??<span class="tooltiptext">PULL THE WORD MYSELF</span></span>
       </div>
       <div class="revealedmyself">
@@ -132,13 +135,34 @@
 <div class="service-content">
   <button class="close-btn" onclick="closeSection('.service'),closeSection('.service-content')">Close</button>
   <div class="service-main">
-    <h1>Services</h1>
-    <div class="webdev">
-      <img src="image/webdev.jpg" alt="">
-      <div class="webdevinfo">
-        <h1>Web Developement</h1>
-        <p>Welcome to my web development corner! Here, I transform ideas into interactive and user-friendly websites. As a dedicated web developer, I specialize in crafting digital experiences that are both visually appealing and technically sound. From coding to design, my goal is to make the online world more engaging and accessible. Join me on this journey of turning concepts into captivating web realities!</p>
-      </div>
+    <h2>SERVICES</h2>
+    <div class="service-display">
+
+    </div>
+    <div class="service-list">
+      <ul>
+        <li class="service-listing" onclick="setActiveServiceTab(this,'.webdevcontent')">
+          <h1><span>WEB</span> DEVELOPMENT</h1>
+          <div class="webdevcontent">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat laborum natus atque, provident voluptas libero commodi non at dolores, numquam ducimus neque officia ab unde, laboriosam est! Itaque, iusto architecto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quisquam. Culpa aut vel deleniti, amet necessitatibus sequi nesciunt incidunt fugit ducimus dolor earum saepe quas sunt blanditiis pariatur quos! Unde? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam omnis quaerat officiis nemo neque delectus tempore fugiat non molestias perspiciatis? Perspiciatis esse veritatis dolores repudiandae quisquam asperiores. Enim, placeat eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit rem itaque commodi quis perspiciatis dolores. Commodi, saepe! Ipsam vero iusto perferendis. Atque repudiandae quasi minus officia accusantium quidem fuga.</p>
+          </div>
+        </li>
+        <li class="service-listing">
+          <h1><span>APP</span> DEVELOPMENT</h1>
+        </li>
+        <li class="service-listing">
+          <h1><span>UI/UX</span> DESIGN</h1>
+        </li>
+        <li class="service-listing">
+          <h1><span>VIDEO</span> EDITING</h1>
+        </li>
+        <li class="service-listing">
+          <h1><span>CONTENT</span> CREATION</h1>
+        </li>
+        <li class="service-listing">
+          <h1><span>COPY</span> WRITING</h1>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

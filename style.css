@@ -9,7 +9,9 @@
   padding: 0;
   margin: 0;
 }
-
+html{
+  scroll-snap-type: y mandatory;
+}
 body {
   overflow: hidden;
   background-color: white;
@@ -17,23 +19,10 @@ body {
 .invitation{
   margin-left: 50vw;
   width: 50vw;
-  height: 100%;
-  top: 0;
-  font-size: 1.5em;
+  height: 100vh;
   position: fixed;
   z-index: -10;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
   animation: fadein 1s ease-in-out both;
-}
-.invitation h2 span{
-  color: var(--c5);
-}
-
-.invitation h1 span{
-  color: var(--c2);
 }
 
 .mainContainer{
@@ -45,7 +34,7 @@ body {
 }
 
 .navBtn{
-  height: 9.5em;
+  height: 10em;
   width: 25em;
   transform: rotate(15deg) translateX(-80px);
   border-radius: 20px;
@@ -86,6 +75,10 @@ body {
   background-color: #050505;
   transition: 0.5s;
 }
+
+
+/* ----------------------------------------------------home styles---------------------------------------- */
+
 
 .home-content{
   display: none;
@@ -251,6 +244,9 @@ body {
   box-shadow: 10px 5px 20px gray;
 }
 
+/* ------------------------------------------about styles----------------------------- */
+
+
 .about-container{
   padding-top: 8%;
   color: var(--c1);
@@ -289,12 +285,14 @@ body {
   padding-top: 6em;
   animation: slideright 1s ease-in-out 1.5s backwards;
 }
-
+.introforreveal span{
+  color: var(--c5);
+}
 
 .tooltip {
   position: relative;
   margin-top: 3em;
-  animation: slideright 1s ease-in-out 6.5s backwards;
+  animation: slideright 1s ease-in-out 10.5s backwards;
   display: inline-block;
   border-bottom: 1px dotted black;
 }
@@ -414,35 +412,122 @@ body {
   background-color: var(--c2);
 }
 
+/* -------------------------------service styles--------------------------------------- */
 
 
-.service-main{
-  width: 100vw;
-  margin-top: 4em;
-}
-
-.service-main h1{
-  text-align: center;
-  color: var(--c1);
-  font-size: 3em;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.webdev{
-  margin-top: 2em;
+.service-main {
   display: flex;
-  background-color: var(--c1);
-}
-.webdev img{
-  margin-left: 2em;
-  border-radius: 20px;
+  flex-direction: row;
 }
 
+.service-list {
+  height: 100vh;
+  width: 100%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  margin: 0 0 0 0;
+  padding: 3em 0 0 0;
+  overflow: hidden; 
+  z-index: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.service-list ul {
+  list-style: none;
+  perspective: 900px;
+  overflow: scroll;
+  scrollbar-color: var(--c3);
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.service-list ul li {
+  transform: rotate3d(0, -1, 0, 25deg);
+  text-align: end;
+  position: relative;
+  transition: transform 0.5s ease-in-out, color 0.5s ease-in-out, padding 0.5s ease-in-out;
+  transform-origin: right;
+  color: var(--c1);
+}
+
+.service-list ul li:nth-child(1) { animation: swirl-down 2s ease-in-out 1.1s backwards; }
+.service-list ul li:nth-child(2) { animation: swirl-down 2s ease-in-out 0.9s backwards; }
+.service-list ul li:nth-child(3) { animation: swirl-down 2s ease-in-out 0.7s backwards; }
+.service-list ul li:nth-child(4) { animation: swirl-down 2s ease-in-out 0.5s backwards; }
+.service-list ul li:nth-child(5) { animation: swirl-down 2s ease-in-out 0.2s backwards; }
+
+.service-listing h1 {
+  font-size: 100px;
+  font-family: 'Druk Wide Web Super Regular', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.service-list ul li:not(.active-listing):hover {
+  transform: rotate3d(0, -1, 0, 20deg);
+  color: var(--c3);
+  -webkit-text-stroke: 2px var(--c1);
+  padding: 1.5em 0;
+}
+
+.webdevcontent {
+  display: none;
+}
+
+.webdevcontent.active-content {
+  display: block;
+  color: var(--c1);
+}
+
+.service-listing{
+  transition: all 2s ease-in-out;
+}
+
+.service-list > .service-listing.active-listing{
+  width: 100%;
+}
+
+.service-listing.active-listing {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  background-color: var(--c3);
+  transform: rotate3d(0, 0, 0, 0deg) translateY(0);
+  transition: all 0.5s, transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  scrollbar-color: var(--c3);
+}
 
 
+.service-listing.active-listing h1 {
+  text-align: end;
+  transition: all 0.5s backwards;
+}
 
-
-
+@keyframes swirl-down {
+  0% {
+    top: -2000px;
+    transform: rotateX(180deg) rotate3d(0, -1, 0, 0deg);
+    transform-origin: center;
+  }
+  25% {
+    transform: rotateX(90deg);
+  }
+  50% {
+    transform: rotateX(45deg);
+  }
+  75% {
+    transform: rotateX(22.5deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotate3d(0, -1, 0, 25deg);
+    top: 0;
+  }
+}
 
 
 
