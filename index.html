@@ -136,31 +136,91 @@
   <button class="close-btn" onclick="closeSection('.service'),closeSection('.service-content')">Close</button>
   <div class="service-main">
     <h2>SERVICES</h2>
-    <div class="service-display">
-
-    </div>
     <div class="service-list">
       <ul>
-        <li class="service-listing" onclick="setActiveServiceTab(this,'.webdevcontent')">
+        <!-- Web Development Service -->
+        <li class="service-listing" onclick="setActiveServiceTab(this, 'webDevContent')">
           <h1><span>WEB</span> DEVELOPMENT</h1>
-          <div class="webdevcontent">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat laborum natus atque, provident voluptas libero commodi non at dolores, numquam ducimus neque officia ab unde, laboriosam est! Itaque, iusto architecto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quisquam. Culpa aut vel deleniti, amet necessitatibus sequi nesciunt incidunt fugit ducimus dolor earum saepe quas sunt blanditiis pariatur quos! Unde? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam omnis quaerat officiis nemo neque delectus tempore fugiat non molestias perspiciatis? Perspiciatis esse veritatis dolores repudiandae quisquam asperiores. Enim, placeat eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit rem itaque commodi quis perspiciatis dolores. Commodi, saepe! Ipsam vero iusto perferendis. Atque repudiandae quasi minus officia accusantium quidem fuga.</p>
+          <div class="listing-content webdevcontent" id="webDevContent">
+            <h2>Web Development</h2>
+            <span onclick="closeSection('.service')">close</span>
+            <p>Our expert web developers craft modern and responsive websites tailored to meet your business needs.</p>
+            <ul>
+              <li>Custom website development</li>
+              <li>Front-end and back-end solutions</li>
+              <li>Responsive and user-friendly design</li>
+            </ul>
           </div>
         </li>
-        <li class="service-listing">
+
+        <!-- App Development Service -->
+        <li class="service-listing" onclick="setActiveServiceTab(this, 'appDevContent')">
           <h1><span>APP</span> DEVELOPMENT</h1>
+          <div class="listing-content appdevcontent" id="appDevContent">
+            <h2>App Development</h2>
+            <p>Transform your ideas into powerful mobile applications with our skilled app development team.</p>
+            <ul>
+              <li>iOS and Android app development</li>
+              <li>Cross-platform solutions</li>
+              <li>User-centric and innovative designs</li>
+            </ul>
+          </div>
         </li>
-        <li class="service-listing">
+
+        <!-- UI/UX Design Service -->
+        <li class="service-listing" onclick="setActiveServiceTab(this, 'uxDesignContent')">
           <h1><span>UI/UX</span> DESIGN</h1>
+          <div class="listing-content uxdesigncontent" id="uxDesignContent">
+            <h2>UI/UX Design</h2>
+            <p>Elevate your digital presence with captivating user interfaces and seamless user experiences.</p>
+            <ul>
+              <li>Intuitive user interface design</li>
+              <li>User experience optimization</li>
+              <li>Wireframing and prototyping</li>
+            </ul>
+          </div>
         </li>
-        <li class="service-listing">
+
+        <!-- Video Editing Service -->
+        <li class="service-listing" onclick="setActiveServiceTab(this, 'videoEditingContent')">
           <h1><span>VIDEO</span> EDITING</h1>
+          <div class="listing-content videoeditingcontent" id="videoEditingContent">
+            <h2>Video Editing</h2>
+            <p>Bring your videos to life with our professional video editing services and creative storytelling.</p>
+            <ul>
+              <li>Editing and post-production</li>
+              <li>Visual effects and enhancements</li>
+              <li>Engaging and polished video content</li>
+            </ul>
+          </div>
         </li>
-        <li class="service-listing">
+
+        <!-- Content Creation Service -->
+        <li class="service-listing" onclick="setActiveServiceTab(this, 'contentCreationContent')">
           <h1><span>CONTENT</span> CREATION</h1>
+          <div class="listing-content contentcreationcontent" id="contentCreationContent">
+            <h2>Content Creation</h2>
+            <p>Craft compelling and shareable content across various platforms to connect with your audience.</p>
+            <ul>
+              <li>Content strategy and planning</li>
+              <li>Copywriting and content creation</li>
+              <li>Social media content development</li>
+            </ul>
+          </div>
         </li>
-        <li class="service-listing">
+
+        <!-- Copywriting Service -->
+        <li class="service-listing" onclick="setActiveServiceTab(this, 'copyWritingContent')">
           <h1><span>COPY</span> WRITING</h1>
+          <div class="listing-content copywritingcontent" id="copyWritingContent">
+            <h2>Copywriting</h2>
+            <p>Words that sell! Our copywriting services are designed to engage and convert your target audience.</p>
+            <ul>
+              <li>Compelling ad copy</li>
+              <li>SEO-friendly content</li>
+              <li>Brand messaging and storytelling</li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>

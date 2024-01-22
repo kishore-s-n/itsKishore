@@ -26,24 +26,20 @@ function setActiveTab(tab,contentId) {
     activeContent.classList.add('active-content')
 }
 
-function setActiveServiceTab(tab, contentId) {
-  const selectedTab = document.querySelector('.service-listing.active-listing');
-  if (selectedTab) {
-    selectedTab.classList.remove('active-listing');
-  }
+function setActiveServiceTab(title, content) {
+  const listings = document.querySelectorAll('.service-listing');
+  listings.forEach(link => link.classList.remove('active-listing'));
+  listings.forEach(link => link.classList.add('remove-listing'));
+  title.classList.remove("remove-listing");
+  title.classList.add("active-listing");
 
-  const selectedContent = document.querySelector('.service-display > .active-content');
-  if (selectedContent) {
-    selectedContent.classList.remove('active-content');
-  }
+  const services = document.querySelectorAll('.listing-content');
+  services.forEach(service => service.classList.remove('active-content'));
 
-  tab.classList.add('active-listing');
-
-  const content = document.querySelector(contentId);
-  if (content) {
-    content.classList.add('active-content');
-  }
+  const activeContent = document.getElementById(content);
+  activeContent.classList.add('active-content');
 }
+
 
 
 document.addEventListener("DOMContentLoaded", function() {

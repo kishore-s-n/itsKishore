@@ -430,7 +430,7 @@ body {
   align-items: end;
   margin: 0 0 0 0;
   padding: 3em 0 0 0;
-  overflow: hidden; 
+  overflow-y: hidden; 
   z-index: 0;
   transition: all 0.5s ease-in-out;
 }
@@ -438,7 +438,8 @@ body {
 .service-list ul {
   list-style: none;
   perspective: 900px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: none;
   scrollbar-color: var(--c3);
   padding-top: 20%;
   padding-bottom: 20%;
@@ -473,40 +474,40 @@ body {
   padding: 1.5em 0;
 }
 
-.webdevcontent {
+.service-listing{
+  
+  transition: all 1s;
+  transition-delay: 1s;
+}
+
+.service-listing.active-listing{
+  transform: rotate3d(0, 0, 0, 0deg);
+  background-color: var(--c3);
+  height: 100vh;
+  width: 100%;
+}
+
+
+.listing-content{
   display: none;
 }
 
-.webdevcontent.active-content {
-  display: block;
-  color: var(--c1);
-}
-
-.service-listing{
-  transition: all 2s ease-in-out;
-}
-
-.service-list > .service-listing.active-listing{
-  width: 100%;
-}
-
-.service-listing.active-listing {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  top: 0;
-  right: 0;
-  background-color: var(--c3);
-  transform: rotate3d(0, 0, 0, 0deg) translateY(0);
-  transition: all 0.5s, transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  scrollbar-color: var(--c3);
-}
 
 
-.service-listing.active-listing h1 {
-  text-align: end;
-  transition: all 0.5s backwards;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes swirl-down {
   0% {
