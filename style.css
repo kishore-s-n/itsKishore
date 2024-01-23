@@ -467,6 +467,13 @@ body {
   padding: 0;
 }
 
+.service-listing:nth-child(1) h1 span {color: var(--c5);}
+.service-listing:nth-child(2) h1 span {color: var(--c2);}
+.service-listing:nth-child(3) h1 span {color: var(--c4);}
+.service-listing:nth-child(4) h1 span {color: var(--c5);}
+.service-listing:nth-child(5) h1 span {color: var(--c2);}
+.service-listing:nth-child(6) h1 span {color: var(--c4);}
+
 .service-list ul li:not(.active-listing):hover {
   transform: rotate3d(0, -1, 0, 20deg);
   color: var(--c3);
@@ -482,9 +489,7 @@ body {
 
 .service-listing.active-listing{
   transform: rotate3d(0, 0, 0, 0deg);
-  background-color: var(--c3);
-  height: 100vh;
-  width: 100%;
+  
 }
 
 
