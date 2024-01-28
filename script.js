@@ -27,17 +27,10 @@ function setActiveTab(tab,contentId) {
 }
 
 function setActiveServiceTab(title, content) {
-  const listings = document.querySelectorAll('.service-listing');
-  listings.forEach(link => link.classList.remove('active-listing'));
-  listings.forEach(link => link.classList.add('remove-listing'));
-  title.classList.remove("remove-listing");
-  title.classList.add("active-listing");
-
-  const services = document.querySelectorAll('.listing-content');
-  services.forEach(service => service.classList.remove('active-content'));
+  title.classList.toggle("active-listing");
 
   const activeContent = document.getElementById(content);
-  activeContent.classList.add('active-content');
+  activeContent.classList.toggle('active-content');
 }
 
 

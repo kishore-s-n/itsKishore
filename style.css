@@ -420,6 +420,14 @@ body {
   flex-direction: row;
 }
 
+.service-main h2{
+  font-size: 2em;
+  margin-top: 2em;
+  padding: 2em;
+  color: var(--c1);
+  animation: slideright 1s ease-in-out forwards;
+}
+
 .service-list {
   height: 100vh;
   width: 100%;
@@ -482,19 +490,77 @@ body {
 }
 
 .service-listing{
-  
   transition: all 1s;
   transition-delay: 1s;
 }
 
 .service-listing.active-listing{
   transform: rotate3d(0, 0, 0, 0deg);
-  
+  height: max-content;
+  margin: 5em 0;
 }
 
 
 .listing-content{
   display: none;
+  transition: all 1s;
+}
+
+.listing-content.active-content{
+  display: block;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card {
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:nth-child(1){
+  background-color: var(--c1);
+  animation: slideleft 1s ease-in-out 0.2s backwards;
+}
+.card:nth-child(1) p{
+  color: var(--c3);
+}
+.card:nth-child(2){
+  background-color: var(--c2);
+  animation: slideleft 1s ease-in-out 0.4s backwards;
+
+}
+.card:nth-child(2) h3{
+  color: var(--c1);
+}
+.card:nth-child(3){
+  background-color: var(--c4);
+  animation: slideleft 1s ease-in-out 0.6s backwards;
+
+}
+.card:nth-child(4){
+  background-color: var(--c5);
+  animation: slideleft 1s ease-in-out 0.8s backwards;
+}
+
+.card:nth-child(4) h3{
+  color: var(--c1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  color: var(--c3);
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 
@@ -577,9 +643,13 @@ body {
 }
 @keyframes slideleft {
   from{
+    filter: blur(20px);
+    opacity: 0;
     transform: translateX(+50em);
   }
   to{
+    filter: blur(0);
+    opacity: 1;
     transform: translateX(0);
   }
 }
