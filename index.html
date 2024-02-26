@@ -12,6 +12,7 @@
   <script defer src="https://kit.fontawesome.com/800b42292e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
 <main>
   <div class="mainContainer">
     <div class="home navBtn" onclick="setActiveSection('.home'),setActiveSection('.home-content')">
@@ -346,12 +347,21 @@
   <div class="hire-me-form">
     <h1>Contact Form</h1>
     <form id="form" onsubmit="form_submit()">
-      <label for="name">Name</label>
-      <input type="text" placeholder="Name" name="name">
-      <label for="email">Email</label>
-      <input type="email" placeholder="Email" name="email">
-      <label for="text">Project Details</label>
-      <input type="text" placeholder="Project Details" name="projectDetails">
+      <ul>
+        <li>
+          <label for="name">Name</label>
+          <input type="text" placeholder="Name" name="name">
+        </li>
+
+        <li>
+          <label for="email">Email</label>
+          <input type="email" placeholder="Email" name="email">
+        </li>
+        <li>
+          <label for="text">Project Details</label>
+          <input type="text" placeholder="Project Details" name="projectDetails">
+        </li>
+      </ul>
       <button type="submit">Submit</button>
     </form>
     <div class="social_icons">
@@ -363,15 +373,16 @@
   </div>
 
   <div class="hire-me-main">
-    <h1>Let's Work Together</h1>
-    <p>Have a project in mind? Let's discuss and bring your ideas to life.</p>
-    <p>Lets make the projects in your mind a reality.</p>
-    <p class="resume-download"><button>Download Resume</button></p>
+    <div class="hire-me-content">
+      <h1>Let's Work Together</h1>
+      <p>Have a project in mind? Let's discuss and bring your ideas to life.</p>
+      <p>Lets make the projects in your mind a reality.</p>
+      <p class="resume-download"><button>Download Resume</button></p>
+    </div>
   </div>
+  <div id="wordContainer"></div>
   
-  <div class="hire-me-chat-section">
-    
-  </div>
+  
 </div>
 
 <script src="script.js"></script>

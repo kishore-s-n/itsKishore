@@ -34,7 +34,7 @@ body {
 }
 
 .navBtn{
-  height: 10em;
+  height: 21vh;
   width: 25em;
   transform: rotate(15deg) translateX(-80px);
   border-radius: 20px;
@@ -67,6 +67,7 @@ body {
   border-color: transparent;
   margin-top: 2em;
   margin-left: 2em;
+  z-index: 1000;
   position: fixed;
   animation: fadein 0.3s ease-in-out both;
 }
@@ -590,15 +591,30 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  position: absolute;
   background: transparent;
   color: var(--c3);
   padding: 2em;
   width: 100%;
 }
 
+.hire-me-content{
+  background-color: var(--c4);
+  padding: 30px;
+  font-size: larger;
+  border-radius: 1em;
+  z-index: 102;
+  animation: slideleft 1s ease-in-out 1s backwards;
+}
+
+.hire-me-content h1{
+  font-size: 2em;
+  color: var(--c3);
+  padding: 0 0 1em 0;
+}
 .hire-me-form{
   display: flex;
-  width: 60%;
+  width: 30%;
   flex-direction: column;
   justify-content: start;
   align-items: center;
@@ -610,6 +626,7 @@ body {
   margin-left: 5em;
   padding: 4em;
   border-radius: 1em;
+  z-index: 101;
   gap: 2em;
   animation: slideup 1s ease-in-out 1s backwards;
 }
@@ -635,8 +652,68 @@ form{
   width: 100%;
 }
 
+#form ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#form ul li{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+#form label{
+  font-size: 1.5em;
+  color: var(--c3);
+}
+
+#form input{
+  width: 100%;
+}
+
+#form button{
+  width: max-content;
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: var(--c5);
+  color: var(--c1);
+  font-size: 1.5em;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  align-self: center;
+  margin-top: 30px;
+}
+
+.randomskill{
+  padding: 20px;
+  font-size: 1.5em;
+  border-radius: 1em;
+  background-color: var(--c5);
+  color: var(--c1);
+}
 
 
+#wordContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  .floatingWord{
+    position: absolute;
+    font-size: 1.5em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: var(--c5);
+    color: var(--c1);
+    white-space: nowrap;
+    animation: slideup 1s ease-in-out 1s backwards;
+  }  
+}
+
+/* ------------------------------------------animations----------------------------------------------- */
 
 @keyframes swirl-down {
   0% {
