@@ -138,7 +138,6 @@
     <h2>SERVICES</h2>
     <div class="service-list">
       <ul>
-        <!-- Web Development Service -->
         <li class="service-listing" onclick="setActiveServiceTab(this, 'webDevContent')">
           <h1><span>WEB</span> DEVELOPMENT</h1>
           <div class="listing-content webdevcontent" id="webDevContent">
@@ -171,7 +170,6 @@
           </div>
         </li>
 
-        <!-- App Development Service -->
         <li class="service-listing" onclick="setActiveServiceTab(this, 'appDevContent')">
           <h1><span>APP</span> DEVELOPMENT</h1>
           <div class="listing-content appdevcontent" id="appDevContent">
@@ -203,7 +201,6 @@
           </div>
         </li>
 
-        <!-- UI/UX Design Service -->
         <li class="service-listing" onclick="setActiveServiceTab(this, 'uxDesignContent')">
           <h1><span>UI/UX</span> DESIGN</h1>
           <div class="listing-content uxdesigncontent" id="uxDesignContent">
@@ -235,7 +232,6 @@
           </div>
         </li>
 
-        <!-- Video Editing Service -->
         <li class="service-listing" onclick="setActiveServiceTab(this, 'videoEditingContent')">
           <h1><span>VIDEO</span> EDITING</h1>
           <div class="listing-content videoeditingcontent" id="videoEditingContent">
@@ -267,7 +263,6 @@
           </div>
         </li>
 
-        <!-- Content Creation Service -->
         <li class="service-listing" onclick="setActiveServiceTab(this, 'contentCreationContent')">
           <h1><span>CONTENT</span> CREATION</h1>
           <div class="listing-content contentcreationcontent" id="contentCreationContent">
@@ -299,7 +294,6 @@
           </div>
         </li>
 
-        <!-- Copywriting Service -->
         <li class="service-listing" onclick="setActiveServiceTab(this, 'copyWritingContent')">
           <h1><span>COPY</span> WRITING</h1>
           <div class="listing-content copywritingcontent" id="copyWritingContent">
@@ -338,11 +332,46 @@
 
 <div class="portfolio-content">
   <button class="close-btn" onclick="closeSection('.portfolio'),closeSection('.portfolio-content')">Close</button>
+  <div class="portfolio-main">
+    <h1>Portfolio</h1>
+    <div class="portfolio-cards">
+      
+    </div>
+  </div>
 </div>
 
 
 <div class="hire-content">
   <button class="close-btn" onclick="closeSection('.hire'),closeSection('.hire-content')">Close</button>
+  <div class="hire-me-form">
+    <h1>Contact Form</h1>
+    <form id="form" onsubmit="form_submit()">
+      <label for="name">Name</label>
+      <input type="text" placeholder="Name" name="name">
+      <label for="email">Email</label>
+      <input type="email" placeholder="Email" name="email">
+      <label for="text">Project Details</label>
+      <input type="text" placeholder="Project Details" name="projectDetails">
+      <button type="submit">Submit</button>
+    </form>
+    <div class="social_icons">
+      <a href="https://www.linkedin.com/in/kishore-sn-030886258" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
+      <a href=""><i class="fa-brands fa-facebook fa-2xl" target="_blank"></i></a>
+      <a href=""><i class="fa-brands fa-instagram fa-2xl" target="_blank"></i></a>
+      <a href=""><i class="fa-brands fa-github fa-2xl" target="_blank"></i></a>
+    </div>
+  </div>
+
+  <div class="hire-me-main">
+    <h1>Let's Work Together</h1>
+    <p>Have a project in mind? Let's discuss and bring your ideas to life.</p>
+    <p>Lets make the projects in your mind a reality.</p>
+    <p class="resume-download"><button>Download Resume</button></p>
+  </div>
+  
+  <div class="hire-me-chat-section">
+    
+  </div>
 </div>
 
 <script src="script.js"></script>

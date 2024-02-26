@@ -152,8 +152,9 @@ body {
 
 .hire-content.active{
   z-index: 100;
-  display: block;
+  display: flex;
   height: 100%;
+  width: 100%;
 }
 
 .navBtn h1{
@@ -563,6 +564,14 @@ body {
   margin-bottom: 10px;
 }
 
+/* ----------------------------portfolio-content-------------------------------------------- */
+.portfolio-cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
 
 
 
@@ -573,9 +582,58 @@ body {
 
 
 
+/* -------------------------------------------footer--------------------------------------- */
+
+.hire-me-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: transparent;
+  color: var(--c3);
+  padding: 2em;
+  width: 100%;
+}
+
+.hire-me-form{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  gap: 2em;
+  background-color: var(--c1);
+  color: var(--c3);
+  margin-top: 7em;
+  margin-left: 5em;
+  padding: 4em;
+  border-radius: 1em;
+  gap: 2em;
+  animation: slideup 1s ease-in-out 1s backwards;
+}
+
+.hire-me-form h1{
+  font-size: 2em;
+  color: var(--c3);
+  animation: fadein 0.5s ease-in-out 1s backwards;
+}
 
 
+#form{
+  background-color: var(--c1);
+  padding: 2em;
+  border-radius: 1em;
+  color: var(--c3);
+}
 
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
 
 
 
@@ -654,6 +712,18 @@ body {
   }
 }
 
+@keyframes slideup {
+  from{
+    transform: translateY(20em);
+    filter: blur(20px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
 
 
 @media (max-height:500px){
