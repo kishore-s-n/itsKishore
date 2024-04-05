@@ -1,392 +1,716 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  
-  <link href="https://db.onlinewebfonts.com/c/2f8845bdde42e943355a39765c5be5c0?family=Druk+Wide+Web+Super+Regular" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <script defer src="https://kit.fontawesome.com/800b42292e.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link
+      href="https://db.onlinewebfonts.com/c/2f8845bdde42e943355a39765c5be5c0?family=Druk+Wide+Web+Super+Regular"
+      rel="stylesheet"
+    />
 
-<main>
-  <div class="mainContainer">
-    <div class="home navBtn" onclick="setActiveSection('.home'),setActiveSection('.home-content')">
-      <h1>Home</h1>
-    </div>
-    <div class="about navBtn" onclick="setActiveSection('.about'),setActiveSection('.about-content')">          
-      <h1>About</h1>
-    </div>
-    <div class="service navBtn" onclick="setActiveSection('.service'),setActiveSection('.service-content')">        
-      <h1>Service</h1>
-    </div>
-    <div class="portfolio navBtn" onclick="setActiveSection('.portfolio'),setActiveSection('.portfolio-content')">        
-      <h1>Portfolio</h1>
-    </div>
-    <div class="hire navBtn" onclick="setActiveSection('.hire'),setActiveSection('.hire-content')">
-      <h1>Hire Me</h1>
-    </div>
-  </div>
-  <div class="invitation">
-    <img src="image/myphoto.png" alt="just my photo">
-    <h1>This is My Portfolio </h1>
-  </div>
-</main>
+    <script
+      defer
+      src="https://kit.fontawesome.com/800b42292e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <div class="mainContainer">
+        <div
+          class="home navBtn"
+          onclick="setActiveSection('.home'),setActiveSection('.home-content')"
+        >
+          <h1>Home</h1>
+        </div>
+        <div
+          class="about navBtn"
+          onclick="setActiveSection('.about'),setActiveSection('.about-content')"
+        >
+          <h1>About</h1>
+        </div>
+        <div
+          class="service navBtn"
+          onclick="setActiveSection('.service'),setActiveSection('.service-content')"
+        >
+          <h1>Service</h1>
+        </div>
+        <div
+          class="portfolio navBtn"
+          onclick="setActiveSection('.portfolio'),setActiveSection('.portfolio-content')"
+        >
+          <h1>Portfolio</h1>
+        </div>
+        <div
+          class="hire navBtn"
+          onclick="setActiveSection('.hire'),setActiveSection('.hire-content')"
+        >
+          <h1>Hire Me</h1>
+        </div>
+      </div>
+      <div class="invitation">
+        <img src="image/myphoto.png" alt="just my photo" />
+        <h1>This is My Portfolio</h1>
+      </div>
+    </main>
 
-<div class="home-content">
-  <button class="close-btn" onclick="closeSection('.home'),closeSection('.home-content')">Close</button>
-  <div class="home-main">
-    <div class="greeting">
-      <div class="greet">
-          <h1>Hi,Welcome👋</h1>
-          <h2>This is <span>Kishore</span></h2>
-      </div>
-      <div class="social_icons">
-          <a href="https://www.linkedin.com/in/kishore-sn-030886258" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
-          <a href=""><i class="fa-brands fa-facebook fa-2xl" target="_blank"></i></a>
-          <a href=""><i class="fa-brands fa-instagram fa-2xl" target="_blank"></i></a>
-          <a href=""><i class="fa-brands fa-github fa-2xl" target="_blank"></i></a>
-      </div>
-      <div class="gotonext">
-          <button class="nxtbtn" onclick="closeSection('.home'),closeSection('.home-content'),setActiveSection('.about'),setActiveSection('.about-content')">Next</button>
-          <button class="nxtbtn" onclick="closeSection('.home'),closeSection('.home-content'),setActiveSection('.hire'),setActiveSection('.hire-content')">Hire Me</button>
-          <button class="cvbtn">Download CV</button>
-      </div>
-    </div>
-    <div class="mypic">
-      <img src="image\mycode.png" alt="inspirational quote">
-    </div>
-  </div>
-</div>
-      
-<div class="about-content">
-  <button class="close-btn" onclick="closeSection('.about'),closeSection('.about-content')">Close</button>
-  <div class="about-container">
-    <div class="aboutme">
-      <h1>About</h1> <h1 class="pullable-word" id="pullableWord">Myself</h1>
-      <div class="introforreveal">
-        <p>I'm a Web Developer who likes to be creative, you maybe thinking,How am I creative when i did not add much to this page,I was bored guys😑.But whenever im bored i pull <span>MYSELF</span>😇 to do better and not stop without getting satisfaction.</p>
-        <span class="tooltip">Still can't understand??<span class="tooltiptext">PULL THE WORD MYSELF</span></span>
-      </div>
-      <div class="revealedmyself">
-        <p>Hi Im <span>Kishore</span>,Im a <span>Web developer</span> and <span>App developer</span>,I don't like to do things in a traditional way but to do it in my way and that is how i make a difference.Let's make the world creative and thoughtful starting from us.</p>
-        <div class="gotonext">
-          <button class="nxtbtn" onclick="closeSection('.about'),closeSection('.about-content'),setActiveSection('.home'),setActiveSection('.home-content')">Previous</button>
-          <button class="nxtbtn" onclick="closeSection('.about'),closeSection('.about-content'),setActiveSection('.service'),setActiveSection('.service-content')">Next</button>
-          <button class="nxtbtn" onclick="closeSection('.about'),closeSection('.about-content'),setActiveSection('.hire'),setActiveSection('.hire-content')">Hire Me</button>
-          <button class="cvbtn">Download CV</button>
+    <div class="home-content">
+      <button
+        class="close-btn"
+        onclick="closeSection('.home'),closeSection('.home-content')"
+      >
+        Close
+      </button>
+      <div class="home-main">
+        <div class="greeting">
+          <div class="greet">
+            <h1>Hi,Welcome👋</h1>
+            <h2>This is <span>Kishore</span></h2>
+          </div>
+          <div class="social_icons">
+            <a
+              href="https://www.linkedin.com/in/kishore-sn-030886258"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in fa-2xl"></i
+            ></a>
+            <a href=""
+              ><i class="fa-brands fa-facebook fa-2xl" target="_blank"></i
+            ></a>
+            <a href=""
+              ><i class="fa-brands fa-instagram fa-2xl" target="_blank"></i
+            ></a>
+            <a href=""
+              ><i class="fa-brands fa-github fa-2xl" target="_blank"></i
+            ></a>
+          </div>
+          <div class="gotonext">
+            <button
+              class="nxtbtn"
+              onclick="closeSection('.home'),closeSection('.home-content'),setActiveSection('.about'),setActiveSection('.about-content')"
+            >
+              Next
+            </button>
+            <button
+              class="nxtbtn"
+              onclick="closeSection('.home'),closeSection('.home-content'),setActiveSection('.hire'),setActiveSection('.hire-content')"
+            >
+              Hire Me
+            </button>
+            <button class="cvbtn">Download CV</button>
+          </div>
+        </div>
+        <div class="mypic">
+          <img src="image\mycode.png" alt="inspirational quote" />
         </div>
       </div>
     </div>
-    <div class="details">
-      <div class="qualification">
-        <div class="tab-titles">
-          <ul>
-              <li onclick="setActiveTab(this,'skill-contents')" class="tab-link active-tab">
+
+    <div class="about-content">
+      <button
+        class="close-btn"
+        onclick="closeSection('.about'),closeSection('.about-content')"
+      >
+        Close
+      </button>
+      <div class="about-container">
+        <div class="aboutme">
+          <h1>About</h1>
+          <h1 class="pullable-word" id="pullableWord">Myself</h1>
+          <div class="introforreveal">
+            <p>
+              I'm a Web Developer who likes to be creative, you maybe
+              thinking,How am I creative when i did not add much to this page,I
+              was bored guys😑.But whenever im bored i pull
+              <span>MYSELF</span>😇 to do better and not stop without getting
+              satisfaction.
+            </p>
+            <span class="tooltip"
+              >Still can't understand??<span class="tooltiptext"
+                >PULL THE WORD MYSELF</span
+              ></span
+            >
+          </div>
+          <div class="revealedmyself">
+            <p>
+              Hi Im <span>Kishore</span>,Im a <span>Web developer</span> and
+              <span>App developer</span>,I don't like to do things in a
+              traditional way but to do it in my way and that is how i make a
+              difference.Let's make the world creative and thoughtful starting
+              from us.
+            </p>
+            <div class="gotonext">
+              <button
+                class="nxtbtn"
+                onclick="closeSection('.about'),closeSection('.about-content'),setActiveSection('.home'),setActiveSection('.home-content')"
+              >
+                Previous
+              </button>
+              <button
+                class="nxtbtn"
+                onclick="closeSection('.about'),closeSection('.about-content'),setActiveSection('.service'),setActiveSection('.service-content')"
+              >
+                Next
+              </button>
+              <button
+                class="nxtbtn"
+                onclick="closeSection('.about'),closeSection('.about-content'),setActiveSection('.hire'),setActiveSection('.hire-content')"
+              >
+                Hire Me
+              </button>
+              <button class="cvbtn">Download CV</button>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="qualification">
+            <div class="tab-titles">
+              <ul>
+                <li
+                  onclick="setActiveTab(this,'skill-contents')"
+                  class="tab-link active-tab"
+                >
                   Skills
-              </li>
-              <li onclick="setActiveTab(this,'experience-contents')" class="tab-link ">
+                </li>
+                <li
+                  onclick="setActiveTab(this,'experience-contents')"
+                  class="tab-link"
+                >
                   Experience
-              </li>
-              <li onclick="setActiveTab(this,'education-contents')" class="tab-link ">
+                </li>
+                <li
+                  onclick="setActiveTab(this,'education-contents')"
+                  class="tab-link"
+                >
                   Education
-              </li>
-          </ul>
+                </li>
+              </ul>
+            </div>
+            <div id="skill-contents" class="tab-contents mt-10 active-content">
+              <ul>
+                <li>
+                  <span>Web Development</span>
+                  <p>Development of web apps and website</p>
+                </li>
+                <li>
+                  <span>UI/UX</span>
+                  <p>Designing of Web-Apps and Websites</p>
+                </li>
+                <li>
+                  <span>App Development</span>
+                  <p>Development of mobile and windows applications</p>
+                </li>
+              </ul>
+            </div>
+            <div id="experience-contents" class="tab-contents mt-10">
+              <ul>
+                <li>
+                  <span>Portfolio Website</span>
+                  <p>Development of web apps and website</p>
+                </li>
+                <li>
+                  <span>Business Portfolio</span>
+                  <p>Designing of Web-Apps and Websites</p>
+                </li>
+                <li>
+                  <span>E-Commerce</span>
+                  <p>Development of mobile and windows applications</p>
+                </li>
+              </ul>
+            </div>
+            <div id="education-contents" class="tab-contents mt-10">
+              <ul>
+                <li>
+                  <span>Electrical and Communication Engineering</span>
+                  <p>I am currently doing my</p>
+                </li>
+                <li>
+                  <span>UI/UX</span>
+                  <p>Designing of Web-Apps and Websites</p>
+                </li>
+                <li>
+                  <span>App Development</span>
+                  <p>Development of mobile and windows applications</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hardskills">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>React JS</li>
+              <li>Python</li>
+            </ul>
+          </div>
         </div>
-        <div id="skill-contents" class="tab-contents mt-10 active-content">
+      </div>
+    </div>
+
+    <div class="service-content">
+      <button
+        class="close-btn"
+        onclick="closeSection('.service'),closeSection('.service-content')"
+      >
+        Close
+      </button>
+      <div class="service-main">
+        <h2>SERVICES</h2>
+        <div class="service-list">
           <ul>
-              <li><span>Web Development</span><p>Development of web apps and website </p></li>
-              <li><span>UI/UX</span><p>Designing of Web-Apps and Websites</p></li>
-              <li><span>App Development</span><p>Development of mobile and windows applications</p></li>
-          </ul>
-        </div>
-        <div id="experience-contents" class="tab-contents mt-10">
-          <ul>
-              <li><span>Portfolio Website</span><p>Development of web apps and website </p></li>
-              <li><span>Business Portfolio</span><p>Designing of Web-Apps and Websites</p></li>
-              <li><span>E-Commerce</span><p>Development of mobile and windows applications</p></li>
-          </ul>
-        </div>
-        <div id="education-contents" class="tab-contents mt-10">
-          <ul>
-              <li><span>Electrical and Communication Engineering</span><p>I am currently doing my </p></li>
-              <li><span>UI/UX</span><p>Designing of Web-Apps and Websites</p></li>
-              <li><span>App Development</span><p>Development of mobile and windows applications</p></li>
+            <li
+              class="service-listing"
+              onclick="setActiveServiceTab(this, 'webDevContent')"
+            >
+              <h1><span>WEB</span> DEVELOPMENT</h1>
+              <div class="listing-content webdevcontent" id="webDevContent">
+                <div class="card-container">
+                  <!-- Card 1 -->
+                  <div class="card">
+                    <h3>Custom Website Development</h3>
+                    <p>
+                      We specialize in creating unique and tailored websites to
+                      suit your business requirements.
+                    </p>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="card">
+                    <h3>Front-end and Back-end Solutions</h3>
+                    <p>
+                      Our team ensures seamless integration of front-end and
+                      back-end technologies for optimal performance.
+                    </p>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="card">
+                    <h3>Responsive Design</h3>
+                    <p>
+                      We prioritize responsive design to ensure your website
+                      looks great and functions well on all devices.
+                    </p>
+                  </div>
+
+                  <!-- Card 4 -->
+                  <div class="card">
+                    <h3>User-friendly Experience</h3>
+                    <p>
+                      Creating interfaces that are intuitive and provide a
+                      positive user experience is our top priority.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="service-listing"
+              onclick="setActiveServiceTab(this, 'appDevContent')"
+            >
+              <h1><span>APP</span> DEVELOPMENT</h1>
+              <div class="listing-content appdevcontent" id="appDevContent">
+                <div class="card-container">
+                  <!-- Card 1 -->
+                  <div class="card">
+                    <h3>iOS and Android App Development</h3>
+                    <p>
+                      We specialize in creating high-quality applications for
+                      both iOS and Android platforms.
+                    </p>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="card">
+                    <h3>Cross-Platform Solutions</h3>
+                    <p>
+                      Developing applications that work seamlessly across
+                      multiple platforms for wider reach.
+                    </p>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="card">
+                    <h3>User-Centric and Innovative Designs</h3>
+                    <p>
+                      We focus on designing apps with user-centric interfaces
+                      and innovative features.
+                    </p>
+                  </div>
+
+                  <!-- Card 4 -->
+                  <div class="card">
+                    <h3>Scalable and Robust Solutions</h3>
+                    <p>
+                      Our apps are built to be scalable and robust, ensuring
+                      optimal performance and reliability.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="service-listing"
+              onclick="setActiveServiceTab(this, 'uxDesignContent')"
+            >
+              <h1><span>UI/UX</span> DESIGN</h1>
+              <div class="listing-content uxdesigncontent" id="uxDesignContent">
+                <div class="card-container">
+                  <!-- Card 1 -->
+                  <div class="card">
+                    <h3>Intuitive User Interface Design</h3>
+                    <p>
+                      We create intuitive and visually appealing user interfaces
+                      that enhance the overall user experience.
+                    </p>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="card">
+                    <h3>User Experience Optimization</h3>
+                    <p>
+                      Optimizing the overall user experience to ensure user
+                      satisfaction and engagement.
+                    </p>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="card">
+                    <h3>Wireframing and Prototyping</h3>
+                    <p>
+                      Using wireframes and prototypes to visualize and refine
+                      the design before implementation.
+                    </p>
+                  </div>
+
+                  <!-- Card 4 -->
+                  <div class="card">
+                    <h3>Responsive Design Principles</h3>
+                    <p>
+                      Implementing responsive design principles for seamless
+                      experiences across various devices.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="service-listing"
+              onclick="setActiveServiceTab(this, 'videoEditingContent')"
+            >
+              <h1><span>VIDEO</span> EDITING</h1>
+              <div
+                class="listing-content videoeditingcontent"
+                id="videoEditingContent"
+              >
+                <div class="card-container">
+                  <!-- Card 1 -->
+                  <div class="card">
+                    <h3>Editing and Post-Production</h3>
+                    <p>
+                      Expert editing and post-production services to enhance the
+                      visual appeal of your videos.
+                    </p>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="card">
+                    <h3>Visual Effects and Enhancements</h3>
+                    <p>
+                      Incorporating visual effects and enhancements to add
+                      creativity and engagement to your videos.
+                    </p>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="card">
+                    <h3>Engaging and Polished Content</h3>
+                    <p>
+                      Delivering engaging and polished video content that
+                      captivates your audience and tells a compelling story.
+                    </p>
+                  </div>
+
+                  <!-- Card 4 -->
+                  <div class="card">
+                    <h3>Customized Video Solutions</h3>
+                    <p>
+                      Providing customized video solutions tailored to meet your
+                      specific needs and goals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="service-listing"
+              onclick="setActiveServiceTab(this, 'contentCreationContent')"
+            >
+              <h1><span>CONTENT</span> CREATION</h1>
+              <div
+                class="listing-content contentcreationcontent"
+                id="contentCreationContent"
+              >
+                <div class="card-container">
+                  <!-- Card 1 -->
+                  <div class="card">
+                    <h3>Content Strategy and Planning</h3>
+                    <p>
+                      Strategic planning to create content that aligns with your
+                      brand, goals, and target audience.
+                    </p>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="card">
+                    <h3>Copywriting and Content Creation</h3>
+                    <p>
+                      Expert copywriting and content creation services to convey
+                      your message effectively and persuasively.
+                    </p>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="card">
+                    <h3>Social Media Content Development</h3>
+                    <p>
+                      Developing engaging content specifically tailored for
+                      various social media platforms to maximize reach.
+                    </p>
+                  </div>
+
+                  <!-- Card 4 -->
+                  <div class="card">
+                    <h3>Visual Content Creation</h3>
+                    <p>
+                      Creating visually appealing content, including graphics
+                      and multimedia, to enhance your online presence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="service-listing"
+              onclick="setActiveServiceTab(this, 'copyWritingContent')"
+            >
+              <h1><span>COPY</span> WRITING</h1>
+              <div
+                class="listing-content copywritingcontent"
+                id="copyWritingContent"
+              >
+                <div class="card-container">
+                  <!-- Card 1 -->
+                  <div class="card">
+                    <h3>Compelling Ad Copy</h3>
+                    <p>
+                      Create persuasive ad copy that captures attention and
+                      motivates your audience to take action.
+                    </p>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="card">
+                    <h3>SEO-Friendly Content</h3>
+                    <p>
+                      Optimize your content for search engines to improve
+                      visibility and attract organic traffic.
+                    </p>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="card">
+                    <h3>Brand Messaging and Storytelling</h3>
+                    <p>
+                      Develop a unique brand voice and narrative that resonates
+                      with your audience and builds brand identity.
+                    </p>
+                  </div>
+
+                  <!-- Card 4 -->
+                  <div class="card">
+                    <h3>Email Campaign Copywriting</h3>
+                    <p>
+                      Create compelling copy for email campaigns to increase
+                      open rates, clicks, and conversions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="hardskills">
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Javascript</li>
-          <li>React JS</li>
-          <li>Python</li>
-        </ul>
+    </div>
+
+    <div class="portfolio-content">
+      <button
+        class="close-btn"
+        onclick="closeSection('.portfolio'),closeSection('.portfolio-content')"
+      >
+        Close
+      </button>
+      <div class="portfolio-main">
+        <h1>Portfolio</h1>
+        <div class="portfolio-container">
+          <div class="portfolio-card">
+            <div class="portfolio-card-content">
+              <div class="image-container">
+                <img
+                  src="image/coffee-site-img.jpg"
+                  alt="graphic designer website"
+                />
+              </div>
+              <div class="content-container">
+                <h2>Coffee Shop Website</h2>
+                <p>
+                  This is a portfolio project that I have done in my learning
+                  period of my college. I have used HTML,Tailwind CSS and
+                  JavaScript to make this project.
+                </p>
+              </div>
+            </div>
+            <div class="protfolio-card-content-links">
+              <a
+                href="https://github.com/kishore-s-n/coffee-site"
+                target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://coffee-shop-site-asl.netlify.app" target="_blank"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="portfolio-card odd">
+            <div class="portfolio-card-content odd">
+              <div class="image-container">
+                <img
+                  src="image/king-graphics.jpg"
+                  alt="graphic designer website"
+                />
+              </div>
+              <div class="content-container">
+                <h2>King Graphics</h2>
+                <p>
+                  This is a portfolio project that I have done in my learning
+                  period of my college. I have used HTML,Tailwind CSS and
+                  JavaScript to make this project.
+                </p>
+              </div>
+            </div>
+            <div class="protfolio-card-content-links">
+              <a
+                href="https://github.com/snk-king/king-graphics"
+                target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://king-graphics.netlify.app" target="_blank"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-card-content">
+              <div class="image-container">
+                <img
+                  src="image/sushi-site-img.jpg"
+                  alt="graphic designer website"
+                />
+              </div>
+              <div class="content-container">
+                <h2>Sushi Shop Website</h2>
+                <p>
+                  This is a portfolio project that I have done in my learning
+                  period of my college. I have used HTML,Tailwind CSS and
+                  JavaScript to make this project.
+                </p>
+              </div>
+            </div>
+            <div class="protfolio-card-content-links">
+              <a href="https://github.com/kishore-s-n/Sushisite" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://snksushisite.netlify.app/" target="_blank"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
+    <div class="hire-content">
+      <button
+        class="close-btn"
+        onclick="closeSection('.hire'),closeSection('.hire-content')"
+      >
+        Close
+      </button>
+      <div class="hire-me-form">
+        <h1>Contact Form</h1>
+        <form id="form" onsubmit="form_submit()">
+          <ul>
+            <li>
+              <label for="name">Name</label>
+              <input type="text" placeholder="Name" name="name" />
+            </li>
 
-<div class="service-content">
-  <button class="close-btn" onclick="closeSection('.service'),closeSection('.service-content')">Close</button>
-  <div class="service-main">
-    <h2>SERVICES</h2>
-    <div class="service-list">
-      <ul>
-        <li class="service-listing" onclick="setActiveServiceTab(this, 'webDevContent')">
-          <h1><span>WEB</span> DEVELOPMENT</h1>
-          <div class="listing-content webdevcontent" id="webDevContent">
-            <div class="card-container">
-              <!-- Card 1 -->
-              <div class="card">
-                <h3>Custom Website Development</h3>
-                <p>We specialize in creating unique and tailored websites to suit your business requirements.</p>
-              </div>
-    
-              <!-- Card 2 -->
-              <div class="card">
-                <h3>Front-end and Back-end Solutions</h3>
-                <p>Our team ensures seamless integration of front-end and back-end technologies for optimal performance.</p>
-              </div>
-    
-              <!-- Card 3 -->
-              <div class="card">
-                <h3>Responsive Design</h3>
-                <p>We prioritize responsive design to ensure your website looks great and functions well on all devices.</p>
-              </div>
-    
-              <!-- Card 4 -->
-              <div class="card">
-                <h3>User-friendly Experience</h3>
-                <p>Creating interfaces that are intuitive and provide a positive user experience is our top priority.</p>
-              </div>
-            </div>
-            
-          </div>
-        </li>
+            <li>
+              <label for="email">Email</label>
+              <input type="email" placeholder="Email" name="email" />
+            </li>
+            <li>
+              <label for="text">Project Details</label>
+              <input
+                type="text"
+                placeholder="Project Details"
+                name="projectDetails"
+              />
+            </li>
+          </ul>
+          <button type="submit">Submit</button>
+        </form>
+        <div class="social_icons">
+          <a
+            href="https://www.linkedin.com/in/kishore-sn-030886258"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin-in fa-2xl"></i
+          ></a>
+          <a href=""
+            ><i class="fa-brands fa-facebook fa-2xl" target="_blank"></i
+          ></a>
+          <a href=""
+            ><i class="fa-brands fa-instagram fa-2xl" target="_blank"></i
+          ></a>
+          <a href=""
+            ><i class="fa-brands fa-github fa-2xl" target="_blank"></i
+          ></a>
+        </div>
+      </div>
 
-        <li class="service-listing" onclick="setActiveServiceTab(this, 'appDevContent')">
-          <h1><span>APP</span> DEVELOPMENT</h1>
-          <div class="listing-content appdevcontent" id="appDevContent">
-            <div class="card-container">
-              <!-- Card 1 -->
-              <div class="card">
-                <h3>iOS and Android App Development</h3>
-                <p>We specialize in creating high-quality applications for both iOS and Android platforms.</p>
-              </div>
-        
-              <!-- Card 2 -->
-              <div class="card">
-                <h3>Cross-Platform Solutions</h3>
-                <p>Developing applications that work seamlessly across multiple platforms for wider reach.</p>
-              </div>
-        
-              <!-- Card 3 -->
-              <div class="card">
-                <h3>User-Centric and Innovative Designs</h3>
-                <p>We focus on designing apps with user-centric interfaces and innovative features.</p>
-              </div>
-        
-              <!-- Card 4 -->
-              <div class="card">
-                <h3>Scalable and Robust Solutions</h3>
-                <p>Our apps are built to be scalable and robust, ensuring optimal performance and reliability.</p>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li class="service-listing" onclick="setActiveServiceTab(this, 'uxDesignContent')">
-          <h1><span>UI/UX</span> DESIGN</h1>
-          <div class="listing-content uxdesigncontent" id="uxDesignContent">
-            <div class="card-container">
-              <!-- Card 1 -->
-              <div class="card">
-                <h3>Intuitive User Interface Design</h3>
-                <p>We create intuitive and visually appealing user interfaces that enhance the overall user experience.</p>
-              </div>
-        
-              <!-- Card 2 -->
-              <div class="card">
-                <h3>User Experience Optimization</h3>
-                <p>Optimizing the overall user experience to ensure user satisfaction and engagement.</p>
-              </div>
-        
-              <!-- Card 3 -->
-              <div class="card">
-                <h3>Wireframing and Prototyping</h3>
-                <p>Using wireframes and prototypes to visualize and refine the design before implementation.</p>
-              </div>
-        
-              <!-- Card 4 -->
-              <div class="card">
-                <h3>Responsive Design Principles</h3>
-                <p>Implementing responsive design principles for seamless experiences across various devices.</p>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li class="service-listing" onclick="setActiveServiceTab(this, 'videoEditingContent')">
-          <h1><span>VIDEO</span> EDITING</h1>
-          <div class="listing-content videoeditingcontent" id="videoEditingContent">
-            <div class="card-container">
-              <!-- Card 1 -->
-              <div class="card">
-                <h3>Editing and Post-Production</h3>
-                <p>Expert editing and post-production services to enhance the visual appeal of your videos.</p>
-              </div>
-        
-              <!-- Card 2 -->
-              <div class="card">
-                <h3>Visual Effects and Enhancements</h3>
-                <p>Incorporating visual effects and enhancements to add creativity and engagement to your videos.</p>
-              </div>
-        
-              <!-- Card 3 -->
-              <div class="card">
-                <h3>Engaging and Polished Content</h3>
-                <p>Delivering engaging and polished video content that captivates your audience and tells a compelling story.</p>
-              </div>
-        
-              <!-- Card 4 -->
-              <div class="card">
-                <h3>Customized Video Solutions</h3>
-                <p>Providing customized video solutions tailored to meet your specific needs and goals.</p>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li class="service-listing" onclick="setActiveServiceTab(this, 'contentCreationContent')">
-          <h1><span>CONTENT</span> CREATION</h1>
-          <div class="listing-content contentcreationcontent" id="contentCreationContent">
-            <div class="card-container">
-              <!-- Card 1 -->
-              <div class="card">
-                <h3>Content Strategy and Planning</h3>
-                <p>Strategic planning to create content that aligns with your brand, goals, and target audience.</p>
-              </div>
-        
-              <!-- Card 2 -->
-              <div class="card">
-                <h3>Copywriting and Content Creation</h3>
-                <p>Expert copywriting and content creation services to convey your message effectively and persuasively.</p>
-              </div>
-        
-              <!-- Card 3 -->
-              <div class="card">
-                <h3>Social Media Content Development</h3>
-                <p>Developing engaging content specifically tailored for various social media platforms to maximize reach.</p>
-              </div>
-        
-              <!-- Card 4 -->
-              <div class="card">
-                <h3>Visual Content Creation</h3>
-                <p>Creating visually appealing content, including graphics and multimedia, to enhance your online presence.</p>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li class="service-listing" onclick="setActiveServiceTab(this, 'copyWritingContent')">
-          <h1><span>COPY</span> WRITING</h1>
-          <div class="listing-content copywritingcontent" id="copyWritingContent">
-            <div class="card-container">
-              <!-- Card 1 -->
-              <div class="card">
-                <h3>Compelling Ad Copy</h3>
-                <p>Create persuasive ad copy that captures attention and motivates your audience to take action.</p>
-              </div>
-        
-              <!-- Card 2 -->
-              <div class="card">
-                <h3>SEO-Friendly Content</h3>
-                <p>Optimize your content for search engines to improve visibility and attract organic traffic.</p>
-              </div>
-        
-              <!-- Card 3 -->
-              <div class="card">
-                <h3>Brand Messaging and Storytelling</h3>
-                <p>Develop a unique brand voice and narrative that resonates with your audience and builds brand identity.</p>
-              </div>
-        
-              <!-- Card 4 -->
-              <div class="card">
-                <h3>Email Campaign Copywriting</h3>
-                <p>Create compelling copy for email campaigns to increase open rates, clicks, and conversions.</p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <div class="hire-me-main">
+        <div class="hire-me-content">
+          <h1>Let's Work Together</h1>
+          <p>
+            Have a project in mind? Let's discuss and bring your ideas to life.
+          </p>
+          <p>Lets make the projects in your mind a reality.</p>
+          <p class="resume-download"><button>Download Resume</button></p>
+        </div>
+      </div>
+      <div id="wordContainer"></div>
     </div>
-  </div>
-</div>
 
-
-<div class="portfolio-content">
-  <button class="close-btn" onclick="closeSection('.portfolio'),closeSection('.portfolio-content')">Close</button>
-  <div class="portfolio-main">
-    <h1>Portfolio</h1>
-    <div class="portfolio-cards">
-      
-    </div>
-  </div>
-</div>
-
-
-<div class="hire-content">
-  <button class="close-btn" onclick="closeSection('.hire'),closeSection('.hire-content')">Close</button>
-  <div class="hire-me-form">
-    <h1>Contact Form</h1>
-    <form id="form" onsubmit="form_submit()">
-      <ul>
-        <li>
-          <label for="name">Name</label>
-          <input type="text" placeholder="Name" name="name">
-        </li>
-
-        <li>
-          <label for="email">Email</label>
-          <input type="email" placeholder="Email" name="email">
-        </li>
-        <li>
-          <label for="text">Project Details</label>
-          <input type="text" placeholder="Project Details" name="projectDetails">
-        </li>
-      </ul>
-      <button type="submit">Submit</button>
-    </form>
-    <div class="social_icons">
-      <a href="https://www.linkedin.com/in/kishore-sn-030886258" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
-      <a href=""><i class="fa-brands fa-facebook fa-2xl" target="_blank"></i></a>
-      <a href=""><i class="fa-brands fa-instagram fa-2xl" target="_blank"></i></a>
-      <a href=""><i class="fa-brands fa-github fa-2xl" target="_blank"></i></a>
-    </div>
-  </div>
-
-  <div class="hire-me-main">
-    <div class="hire-me-content">
-      <h1>Let's Work Together</h1>
-      <p>Have a project in mind? Let's discuss and bring your ideas to life.</p>
-      <p>Lets make the projects in your mind a reality.</p>
-      <p class="resume-download"><button>Download Resume</button></p>
-    </div>
-  </div>
-  <div id="wordContainer"></div>
-  
-  
-</div>
-
-<script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-
