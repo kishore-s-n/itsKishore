@@ -241,13 +241,6 @@ body {
   border-radius: 10px;
   font-size: 1em;
 }
-.cvbtn {
-  background-color: var(--c5);
-  animation: fadein 0.2s ease-in-out 1.8s backwards;
-  padding: 0.5em;
-  border-radius: 10px;
-  font-size: 1em;
-}
 .myimg {
   flex-basis: 50%;
 }
@@ -485,9 +478,11 @@ body {
   animation: swirl-down 2s ease-in-out 0.5s backwards;
 }
 .service-list ul li:nth-child(5) {
-  animation: swirl-down 2s ease-in-out 0.2s backwards;
+  animation: swirl-down 2s ease-in-out 0.3s backwards;
 }
-
+.service-list ul li:nth-child(6) {
+  animation: swirl-down 2s ease-in-out 0.1s backwards;
+}
 .service-listing h1 {
   font-size: 100px;
   font-family: "Druk Wide Web Super Regular", sans-serif;
@@ -595,7 +590,7 @@ body {
 /* ----------------------------portfolio-content-------------------------------------------- */
 .portfolio-main {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -603,7 +598,7 @@ body {
   h1 {
     font-size: 3em;
     color: var(--c1);
-    padding: 1em;
+    padding: 1rem;
     text-align: center;
     text-shadow: 0 0 10px var(--c3);
   }
@@ -652,6 +647,8 @@ body {
 .content-container {
   width: 20%;
   padding: 2em;
+  display: flex;
+  flex-direction: column;
   h2 {
     font-size: 4em;
   }
@@ -705,6 +702,7 @@ body {
 .hire-me-content {
   background-color: var(--c4);
   padding: 30px;
+  margin-left: 150px;
   font-size: larger;
   border-radius: 1em;
   z-index: 102;
@@ -733,6 +731,27 @@ body {
   z-index: 101;
   gap: 2em;
   animation: slideup 1s ease-in-out 1s backwards;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px;
+  margin: 15px 0 0 0;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: #007BFF;
+  border: 1px black;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+
+  animation: fadein 0.2s ease-in-out 1.8s backwards;
+
+}
+.download-btn:hover {
+  background-color: #0056b3;
 }
 
 .hire-me-form h1 {
@@ -769,10 +788,13 @@ form {
 
 #form label {
   font-size: 1.5em;
+  font-weight: 900;
   color: var(--c3);
 }
 
 #form input {
+  padding: 10px;
+  border-radius: 5px;
   width: 100%;
 }
 
